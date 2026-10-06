@@ -1,4 +1,4 @@
-/* ArtSign Studio - механика плит, сигнатура «росчерк-график», i18n (RU в разметке, EN здесь, KK в assets/lang/kk.js) */
+/* ArtSign Studio - плиты, стена сайтов в герое, графики кейсов, i18n (RU в разметке, EN здесь, KK в assets/lang/kk.js) */
 (function () {
   "use strict";
   const $ = (s, r) => (r || document).querySelector(s);
@@ -14,18 +14,16 @@
     "meta.title": "ArtSign Studio - Google Ads + a website as a gift for 180,000 KZT",
     "meta.desc": "Google Ads setup, a selling website as a gift and one month of management for 180,000 KZT. Launch in 2-4 business days. Every lead is visible in the bot. Astana and all of Kazakhstan.",
     "nav.cases": "Cases", "nav.package": "What's included", "nav.works": "Work", "nav.calc": "Calculator", "nav.price": "Price", "nav.contact": "Contact", "nav.how": "How it works", "nav.faq": "FAQ",
-    "hero.kicker": "Google Ads · website · management", "hero.h1a": "Google Ads", "hero.h1b": "+ a website as a gift",
+    "hero.kicker": "Google Ads · website · management", "hero.h1a": "Google Ads", "hero.h1b": "+ a website ", "hero.h1c": "as a gift",
     "hero.lead": "We set up the ads, build a selling website and manage the campaign for a month. 180,000 KZT for everything, launch in 2-4 business days.",
     "hero.btn1": "Estimate my lead cost", "hero.btn2": "Message on WhatsApp", "hero.ig": "Work and ad accounts on Instagram",
-    "scene.q": "car repair astana", "scene.adtag": "Sponsored", "scene.adtitle": "Car repair in Astana in 1 day - CarService01", "scene.addesc": "Diagnostics within an hour, parts in stock. Book on WhatsApp.",
-    "scene.leadt": "New lead", "scene.leadm": "WhatsApp · today 14:32", "scene.leadq": "Query: car repair astana", "scene.leadb": "Block: engine diagnostics",
-    "scene.s1": "CarService01: 235 leads in 30 days", "scene.s2": "MedHome: 157 leads in 30 days", "scene.s3": "S-Profile: 137 leads at $4.30 each",
-    "c1.kicker": "Case · car service · carservice01.kz", "c1.unit": "leads in 30 days", "c1.ch1": "$2.35 per lead", "c1.ch2": "27% of visitors call or write", "c1.ch3": "$10 a day budget",
+    "cs.legend": "clicks and leads by day",
+    "c1.kicker": "Case · car service · carservice01.kz", "c1.unit": "leads in 30 days", "c1.f1": "per lead", "c1.f2": "of visitors call or write", "c1.f3": "daily budget",
     "c1.p": "A website for urgent repairs, a separate block for each service, ads pointed exactly at those blocks.", "c1.link": "Open carservice01.kz",
     "c1.cap": "Google Ads account, 24.07-31.08.2026: 713 clicks, 189 leads at $1.80",
-    "c2.kicker": "Case · metal roofing · s-profile.kz", "c2.unit": "leads at $4.30 each", "c2.h": "Budget tripled, cost per lead stayed the same", "c2.ch1": "$30 a day", "c2.ch2": "CTR 12.7%", "c2.ch3": "negative keywords every week",
-    "c2.p": "A $30-a-day campaign, weekly query cleanup, bid caps.", "c2.link": "Open s-profile.kz", "c2.cap": "Google Ads account, 20.07-31.08.2026: 621 clicks, 137 leads at $4.30",
-    "c3.kicker": "Case · home medical care · med-home.kz", "c3.unit": "leads in 30 days", "c3.ch1": "$3.40 per lead", "c3.ch2": "every fourth visitor gets in touch", "c3.ch3": "CTR 12%",
+    "c2.kicker": "Case · metal roofing · s-profile.kz", "c2.unit": "leads at $4.30 each", "c2.h": "Budget tripled, cost per lead stayed the same", "c2.f1": "daily budget", "c2.f2": "ad CTR", "c2.f3": "clicks in the period",
+    "c2.p": "Weekly query cleanup, bid caps, negative keywords for every ad group.", "c2.link": "Open s-profile.kz", "c2.cap": "Google Ads account, 20.07-31.08.2026: 621 clicks, 137 leads at $4.30",
+    "c3.kicker": "Case · home medical care · med-home.kz", "c3.unit": "leads in 30 days", "c3.f1": "per lead", "c3.f2": "of visitors get in touch", "c3.f3": "ad CTR",
     "c3.p": "Precise keywords for at-home services, instant contact from the phone.", "c3.link": "Open med-home.kz", "c3.cap": "Google Ads account, 17.08-31.08.2026, first two weeks: 251 clicks, 61 leads at $2.37",
     "t.f1": "projects", "t.f2": "new clients a month", "t.f3b": "Contract", "t.f3": "official, with a registered entrepreneur", "t.f4b": "Yours", "t.f4": "the ad account and the website stay with you",
     "m.kicker": "More cases", "m.h2": "Nine more accounts and three design cases", "m.lead": "Cost per lead in client accounts for July-August 2026. We show the screenshots at the meeting.", "m.lider": "Lider Potolki",
@@ -42,7 +40,7 @@
     "b.kicker": "Lead bot", "b.h2": "You see every lead, not just clicks", "b.lead": "The bot sends every call, WhatsApp message and form to Telegram: when, from where and for which query. Once a week, a summary.", "b.badge": "included",
     "b.m1t": "New lead", "b.m1a": "Channel: WhatsApp", "b.m1b": "Source: Google Ads, query \"engine repair astana\"", "b.m1c": "Site block: diagnostics", "b.m1d": "Device: phone",
     "b.m2t": "Weekly summary", "b.m2w": "Mon-Sun", "b.m2a": "leads", "b.m2c": "calls", "b.m2d": "form requests", "b.note": "Example. Your numbers will be your own.",
-    "w.kicker": "Work", "w.h2": "Websites built in the last few weeks", "w.lead": "All links are live. Your website will be of the same level.",
+    "w.kicker": "Work", "w.h2": "Websites built in the last few weeks", "w.lead": "All links are live. Your website will be of the same level.", "w.open": "Open the site",
     "w.f0": "All", "w.f1": "Services", "w.f2": "B2B and manufacturing", "w.f3": "Trade", "w.f4": "Legal and finance", "w.f5": "HoReCa",
     "w.n1": "door hardware", "w.n2": "patents and trademarks", "w.n3": "freight from China", "w.n4": "custom radiators", "w.n5": "AIFC registration", "w.n6": "countryside retreat", "w.n7": "homewear wholesale", "w.n8": "law firm", "w.n9": "hotel", "w.n10": "handyman", "w.n11": "asphalt paving", "w.n12": "car service",
     "w.ig": "More work on Instagram", "r.kicker": "Reviews", "r.h2": "What clients say",
@@ -74,7 +72,7 @@
   const META = { ru: ["ArtSign Studio - реклама в Google + сайт в подарок за 180 000 тг", "Настройка Google Ads, продающий сайт в подарок и месяц ведения за 180 000 тг. Запуск за 2-4 рабочих дня. Каждое обращение видно в боте. Астана и весь Казахстан."] };
 
   // русский словарь собираем из разметки один раз: разметка - источник правды
-  $$("[data-i]").forEach((el) => { I18N.ru[el.dataset.i] = el.textContent; });
+  $$("[data-i]").forEach((el) => { if (I18N.ru[el.dataset.i] === undefined) I18N.ru[el.dataset.i] = el.textContent; });
   Object.assign(I18N.ru, RU_PH);
 
   function loadLang(lang, done) {
@@ -137,6 +135,54 @@
   });
   window.addEventListener("popstate", () => { if (location.hash) scrollToId(location.hash.slice(1)); });
 
+  /* ---------------- герой: стена сайтов ---------------- */
+  const WORKS = ["sutora", "mypatent", "pslgroup", "zhantore", "ahpartners", "sunsara", "kelebek", "legalresource", "hotelcomfort", "provar", "asphalttau", "carservice", "armgrant"];
+  function buildWall() {
+    const wall = $("#wall"); if (!wall) return;
+    const tiles = [];
+    WORKS.forEach((n, i) => { tiles.push([n, "d"]); tiles.push([WORKS[(i + 7) % WORKS.length], "m"]); });
+    const cols = [[], [], [], []];
+    tiles.forEach((t, i) => cols[i % 4].push(t));
+    wall.innerHTML = cols.map((col) => {
+      const one = (lazy) => col.map(([n, k], i) => {
+        const at = lazy || i > 2 ? 'loading="lazy"' : (i === 0 ? 'fetchpriority="high"' : "");
+        return k === "d"
+          ? `<div class="wtile d"><img src="assets/works/${n}.webp" width="880" height="550" alt="" ${at} decoding="async"></div>`
+          : `<div class="wtile m"><img src="assets/works/m/${n}.webp" width="360" height="720" alt="" ${at} decoding="async"></div>`;
+      }).join("");
+      return `<div class="wcol"><div class="wtrack">${one(false)}${one(true)}</div></div>`;
+    }).join("");
+  }
+  buildWall();
+
+  /* ---------------- кейсы: график обращений по реальным точкам ---------------- */
+  const CHARTS = {
+    carservice: { a: [[0.01,0.23],[0.03,0.38],[0.05,0.55],[0.08,0.58],[0.1,0.64],[0.13,0.66],[0.15,0.65],[0.17,0.63],[0.2,0.5],[0.21,0.46],[0.26,0.2],[0.28,0.44],[0.31,0.54],[0.33,0.71],[0.36,0.72],[0.38,0.55],[0.41,0.54],[0.43,0.51],[0.46,0.64],[0.49,0.67],[0.51,0.63],[0.54,0.45],[0.56,0.49],[0.59,0.48],[0.61,0.56],[0.64,0.5],[0.67,0.46],[0.69,0.54],[0.72,0.57],[0.75,0.41],[0.77,0.48],[0.79,0.55],[0.81,0.32],[0.84,0.2],[0.87,0.41],[0.9,0.41],[0.92,0.29],[0.95,0.38],[0.97,0.21]],
+      b: [[0.01,0.18],[0.03,0.3],[0.05,0.67],[0.08,0.65],[0.1,0.51],[0.13,0.44],[0.15,0.46],[0.18,0.49],[0.2,0.45],[0.23,0.31],[0.26,0.2],[0.28,0.26],[0.31,0.35],[0.33,0.42],[0.36,0.55],[0.38,0.51],[0.41,0.39],[0.43,0.45],[0.46,0.42],[0.49,0.55],[0.51,0.54],[0.54,0.52],[0.57,0.46],[0.59,0.41],[0.61,0.46],[0.64,0.34],[0.67,0.33],[0.69,0.56],[0.72,0.57],[0.74,0.6],[0.77,0.33],[0.8,0.67],[0.82,0.24],[0.85,0.2],[0.87,0.41],[0.9,0.55],[0.92,0.6],[0.95,0.41],[0.97,0.18]] },
+    sprofile: { a: [[0.03,0.29],[0.04,0.31],[0.08,0.26],[0.1,0.21],[0.14,0.21],[0.16,0.26],[0.18,0.23],[0.2,0.29],[0.24,0.22],[0.26,0.24],[0.28,0.32],[0.32,0.27],[0.34,0.27],[0.41,0.27],[0.42,0.26],[0.49,0.32],[0.51,0.85],[0.53,0.72],[0.56,0.44],[0.57,0.48],[0.61,0.57],[0.64,0.65],[0.67,0.38],[0.7,0.36],[0.71,0.37],[0.74,0.49],[0.77,0.62],[0.79,0.46],[0.81,0.41],[0.83,0.38],[0.87,0.38],[0.88,0.41],[0.92,0.62],[0.95,0.44],[0.96,0.38]],
+      b: [[0.02,0.21],[0.05,0.29],[0.09,0.28],[0.1,0.27],[0.13,0.29],[0.15,0.32],[0.17,0.32],[0.2,0.34],[0.22,0.34],[0.29,0.34],[0.31,0.34],[0.33,0.33],[0.36,0.25],[0.39,0.34],[0.42,0.34],[0.43,0.34],[0.48,0.34],[0.49,0.34],[0.51,0.59],[0.53,0.77],[0.56,0.64],[0.59,0.85],[0.62,0.57],[0.64,0.56],[0.66,0.6],[0.69,0.5],[0.71,0.6],[0.74,0.64],[0.77,0.64],[0.79,0.65],[0.84,0.52],[0.87,0.59],[0.9,0.72],[0.92,0.71],[0.95,0.62],[0.96,0.67]] },
+    medhome: { a: [[0.02,0.37],[0.03,0.38],[0.05,0.43],[0.07,0.48],[0.1,0.58],[0.13,0.69],[0.15,0.76],[0.18,0.74],[0.2,0.72],[0.23,0.71],[0.26,0.71],[0.28,0.7],[0.31,0.76],[0.32,0.78],[0.36,0.91],[0.37,0.87],[0.41,0.78],[0.43,0.74],[0.47,0.79],[0.49,0.82],[0.54,0.82],[0.56,0.81],[0.59,0.72],[0.62,0.6],[0.64,0.51],[0.67,0.49],[0.69,0.52],[0.72,0.52],[0.73,0.52],[0.77,0.52],[0.8,0.52],[0.82,0.53],[0.93,0.53],[0.94,0.52]],
+      b: [[0.04,0.36],[0.08,0.38],[0.11,0.43],[0.13,0.47],[0.15,0.52],[0.18,0.58],[0.2,0.66],[0.23,0.69],[0.26,0.67],[0.29,0.66],[0.3,0.73],[0.33,0.84],[0.36,0.96],[0.38,0.91],[0.41,0.85],[0.46,0.83],[0.49,0.84],[0.51,0.82],[0.55,0.74],[0.56,0.71],[0.59,0.65],[0.62,0.57],[0.64,0.53],[0.67,0.54],[0.7,0.56],[0.72,0.57],[0.74,0.56],[0.76,0.55],[0.79,0.54],[0.82,0.54],[0.84,0.54],[0.87,0.54],[0.9,0.53],[0.93,0.52],[0.95,0.49],[0.96,0.47]] }
+  };
+  function smoothPath(pts, W, H) {
+    const P = pts.map(([x, y]) => [x * W, H - y * H * .86 - H * .06]);
+    let d = `M${P[0][0].toFixed(1)} ${P[0][1].toFixed(1)}`;
+    for (let i = 0; i < P.length - 1; i++) {
+      const p0 = P[i - 1] || P[i], p1 = P[i], p2 = P[i + 1], p3 = P[i + 2] || p2;
+      const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
+      const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
+      d += ` C${c1[0].toFixed(1)} ${c1[1].toFixed(1)} ${c2[0].toFixed(1)} ${c2[1].toFixed(1)} ${p2[0].toFixed(1)} ${p2[1].toFixed(1)}`;
+    }
+    return { d, last: P[P.length - 1], first: P[0] };
+  }
+  $$(".chart").forEach((box) => {
+    const data = CHARTS[box.dataset.chart]; if (!data) return;
+    const W = 1000, H = 400;
+    const A = smoothPath(data.a, W, H), B = smoothPath(data.b, W, H);
+    const grid = [0.25, 0.5, 0.75].map((g) => `<line x1="0" x2="${W}" y1="${(H * g).toFixed(0)}" y2="${(H * g).toFixed(0)}"/>`).join("");
+    box.innerHTML = `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none"><g class="grid">${grid}</g><path class="area" d="${A.d} L${A.last[0].toFixed(1)} ${H} L${A.first[0].toFixed(1)} ${H} Z"/><path class="ln2" pathLength="1" d="${B.d}"/><path class="ln" pathLength="1" d="${A.d}"/><circle class="dot" cx="${A.last[0].toFixed(1)}" cy="${A.last[1].toFixed(1)}" r="4"/></svg>`;
+  });
+
   /* ---------------- механика плит ---------------- */
   const pws = $$(".pw");
   const hero = $(".hero");
@@ -146,7 +192,7 @@
 
   function runIntro() {
     if (skipIntro) { intro = 1; hero.style.setProperty("--intro", "1"); introDone = true; return; }
-    const t0 = performance.now(), D = 1500;
+    const t0 = performance.now(), D = 1700;
     (function tick(now) {
       const t = clamp((now - t0) / D);
       intro = easeOut(t); hero.style.setProperty("--intro", intro.toFixed(4));
@@ -157,7 +203,7 @@
   const counted = new WeakSet();
   function countUp(el) {
     if (counted.has(el)) return; counted.add(el);
-    const n = +el.dataset.n, t0 = performance.now(), D = REDUCED ? 0 : 1300;
+    const n = +el.dataset.n, t0 = performance.now(), D = REDUCED ? 0 : 1400;
     (function tick(now) {
       const t = D ? clamp((now - t0) / D) : 1;
       el.textContent = Math.round(n * easeOut(t));
@@ -175,14 +221,14 @@
       const { r, enter } = enters[i];
       const stay = r.height > H + 1 ? clamp(-r.top / (r.height - H)) : 0;
       const exit = i + 1 < pws.length ? enters[i + 1].enter : 0;
-      const open = easeOut(clamp((enter - .22) / .78));
+      const open = easeOut(clamp((enter - .3) / .7));
       pw.style.setProperty("--enter", enter.toFixed(4));
       pw.style.setProperty("--stay", stay.toFixed(4));
       pw.style.setProperty("--exit", exit.toFixed(4));
       pw.style.setProperty("--open", open.toFixed(4));
       pw.classList.toggle("gone", exit >= 1);
-      const txt = $(".txt", pw); if (txt && enter > .42) txt.classList.add("on");
-      if (open > .55) { const num = $(".num", pw); if (num) countUp(num); }
+      const txt = $(".txt", pw); if (txt && enter > .5) txt.classList.add("on");
+      if (open > .4) { const num = $(".num", pw); if (num) countUp(num); }
     });
     // липкая панель: после 55% первого экрана, прячется на контактах
     const ct = $("#contact").getBoundingClientRect();
@@ -191,73 +237,32 @@
     // путь клика
     if (pathEl) {
       const r = pathEl.getBoundingClientRect();
-      const p = clamp((H * .85 - r.top) / Math.min(r.height, H * .6));
+      const p = clamp((H * .82 - r.top) / Math.min(r.height, H * .55));
       pathEl.style.setProperty("--p", p.toFixed(4));
-      stepEls.forEach((li, i) => li.classList.toggle("lit", p > (i + .35) / stepEls.length));
+      stepEls.forEach((li, i) => li.classList.toggle("lit", p > (i + .3) / stepEls.length));
     }
   }
   function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
   addEventListener("scroll", onScroll, { passive: true });
   addEventListener("resize", onScroll);
 
-  /* ---------------- герой: сцена ---------------- */
-  const sceneWrap = $(".scene-wrap"), scene = $("#scene"), sline = $("#sline");
-  function fitScene() {
-    if (!sceneWrap) return;
-    const w = sceneWrap.clientWidth;
-    let sc = w / 560;
-    if (innerWidth <= 1080) {
-      // высота под сцену: от её верха до низа плиты минус липкая панель
-      const top = sceneWrap.getBoundingClientRect().top - hero.getBoundingClientRect().top;
-      const avail = innerHeight - top - (innerWidth <= 760 ? 84 : 24);
-      sc = Math.max(.34, Math.min(sc, avail / 520));
-    }
-    scene.style.setProperty("--sc", sc.toFixed(4));
-    sceneWrap.style.height = Math.round(520 * sc) + "px";
-  }
-  if (sline) { const L = sline.getTotalLength(); sline.style.setProperty("--L", L.toFixed(1)); }
-  // живая строка цифр
-  const statSpans = $$("#leadStat span");
-  let statI = 0;
-  if (statSpans.length > 1 && !REDUCED) setInterval(() => {
-    statSpans[statI].classList.remove("is-on"); statI = (statI + 1) % statSpans.length; statSpans[statI].classList.add("is-on");
-  }, 3400);
-
-  /* ---------------- кабинеты: плитки + росчерк-маска ---------------- */
-  const kpis = $$(".kpi");
-  let kpiMode = null;
-  function buildKpis() {
-    const narrow = innerWidth <= 560;
-    if (kpiMode === narrow) return; kpiMode = narrow;
-    kpis.forEach((fig, idx) => {
-      const d = JSON.parse(fig.dataset.kpi), box = $(".kpi-box", fig);
-      const W = 1000, gap = 14, n = d.tiles.length;
-      const cols = narrow ? 2 : n, tw = (W - gap * (cols - 1)) / cols;
-      let y = 0, imgs = "", rowH = 0;
-      d.tiles.forEach((t, i) => {
-        const col = i % cols, th = tw * t[2] / t[1];
-        if (col === 0 && i) { y += rowH + gap; rowH = 0; }
-        rowH = Math.max(rowH, th);
-        imgs += `<image href="assets/kpi/${t[0]}.webp" x="${(col * (tw + gap)).toFixed(1)}" y="${y.toFixed(1)}" width="${tw.toFixed(1)}" height="${th.toFixed(1)}" preserveAspectRatio="none"/>`;
+  /* ---------------- обводка-прожектор по курсору ---------------- */
+  const spots = $$(".spot");
+  if (spots.length && matchMedia("(hover: hover)").matches) {
+    let pm = false, px = 0, py = 0;
+    addEventListener("pointermove", (e) => {
+      px = e.clientX; py = e.clientY;
+      if (pm) return; pm = true;
+      requestAnimationFrame(() => {
+        pm = false;
+        spots.forEach((el) => {
+          const r = el.getBoundingClientRect();
+          if (r.bottom < -200 || r.top > innerHeight + 200) return;
+          el.style.setProperty("--mx", (px - r.left).toFixed(0) + "px");
+          el.style.setProperty("--my", (py - r.top).toFixed(0) + "px");
+        });
       });
-      y += rowH + gap;
-      const ch = W * d.chart[2] / d.chart[1];
-      imgs += `<image href="assets/kpi/${d.chart[0]}.webp" x="0" y="${y.toFixed(1)}" width="${W}" height="${ch.toFixed(1)}" preserveAspectRatio="none"/>`;
-      const Hh = y + ch;
-      const k = Math.max(2, Math.round(Hh / (W * .3))), sw = Hh / k * 1.18;
-      let dpath = "";
-      for (let i = 0; i < k; i++) {
-        const yy = (i + .5) * Hh / k, x0 = i % 2 ? W + sw * .6 : -sw * .6, x1 = i % 2 ? -sw * .6 : W + sw * .6;
-        if (i === 0) dpath += `M${x0.toFixed(0)} ${yy.toFixed(0)} L${x1.toFixed(0)} ${yy.toFixed(0)}`;
-        else {
-          const yp = (i - .5) * Hh / k, cx = x0 + (i % 2 ? sw * .9 : -sw * .9);
-          dpath += ` C${cx.toFixed(0)} ${yp.toFixed(0)} ${cx.toFixed(0)} ${yy.toFixed(0)} ${x0.toFixed(0)} ${yy.toFixed(0)} L${x1.toFixed(0)} ${yy.toFixed(0)}`;
-        }
-      }
-      const id = "kpm" + idx;
-      box.innerHTML = `<svg viewBox="0 0 ${W} ${Hh.toFixed(1)}" role="img" aria-label="Скриншот кабинета Google Ads"><defs><mask id="${id}" maskUnits="userSpaceOnUse" x="0" y="0" width="${W}" height="${Hh.toFixed(1)}"><rect width="${W}" height="${Hh.toFixed(1)}" fill="#000"/><path class="brush" d="${dpath}" stroke-width="${sw.toFixed(1)}"/></mask></defs><g mask="url(#${id})">${imgs}</g></svg>`;
-      const br = $(".brush", box); br.style.setProperty("--L", br.getTotalLength().toFixed(1));
-    });
+    }, { passive: true });
   }
 
   /* ---------------- бегущая строка ---------------- */
@@ -267,7 +272,7 @@
     if (!marq.dataset.dup) { marq.innerHTML += marq.innerHTML; marq.dataset.dup = "1"; }
     const half = marq.scrollWidth / 2;
     marq.style.setProperty("--marq-w", half.toFixed(0));
-    marq.style.setProperty("--marq-d", (half / 60).toFixed(1) + "s");
+    marq.style.setProperty("--marq-d", (half / 55).toFixed(1) + "s");
   }
 
   /* ---------------- проявление ---------------- */
@@ -353,17 +358,17 @@
     h1.style.fontSize = "";
     const base = parseFloat(getComputedStyle(h1).fontSize);
     let size = base, guard = 0;
-    const over = () => $$("span", h1).some((s) => s.scrollWidth > h1.clientWidth + 1);
+    const over = () => $$(":scope > span", h1).some((s) => s.scrollWidth > h1.clientWidth + 1);
     while (over() && guard++ < 14) { size *= .95; h1.style.fontSize = size.toFixed(1) + "px"; }
   }
   document.fonts && document.fonts.ready.then(fitText);
   const _applyLang = applyLang;
-  applyLang = function (l) { _applyLang(l); fitText(); fitScene(); };
+  applyLang = function (l) { _applyLang(l); fitText(); };
 
   /* ---------------- старт ---------------- */
-  function layout() { fitText(); fitScene(); buildKpis(); setupMarq(); update(); }
-  addEventListener("resize", () => { fitText(); fitScene(); buildKpis(); setupMarq(); });
-  addEventListener("load", () => { setupMarq(); fitText(); fitScene(); });
+  function layout() { fitText(); setupMarq(); update(); }
+  addEventListener("resize", () => { fitText(); setupMarq(); });
+  addEventListener("load", () => { setupMarq(); fitText(); });
   layout();
   initLang();
   if (hasHash) { scrollToId(location.hash.slice(1), true); setTimeout(() => { scrollToId(location.hash.slice(1), true); update(); }, 300); }
