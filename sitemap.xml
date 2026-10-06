@@ -9,4 +9,34 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://artsign.kz/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://artsign.kz/"/>
   </url>
+  <url>
+    <loc>https://artsign.kz/sozdanie-saitov/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://artsign.kz/stati/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://artsign.kz/stati/google-reklama-dlya-biznesa/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://artsign.kz/stati/lending-pod-reklamu/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://artsign.kz/stati/skolko-stoit-reklama-v-google/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

@@ -11,21 +11,24 @@
 
   /* ---------------- i18n ---------------- */
   const I18N = { ru: {}, en: {
-    "meta.title": "ArtSign Studio - Google Ads + a website as a gift for 180,000 KZT",
+    "meta.title": "PPC advertising in Astana: Google Ads + a website as a gift",
     "meta.desc": "Google Ads setup, a selling website as a gift and one month of management for 180,000 KZT. Launch in 2-4 business days. Every lead is visible in the bot. Astana and all of Kazakhstan.",
     "nav.cases": "Cases", "nav.package": "What's included", "nav.works": "Work", "nav.calc": "Calculator", "nav.price": "Price", "nav.contact": "Contact", "nav.how": "How it works", "nav.faq": "FAQ",
     "hero.kicker": "Google Ads · website · management", "hero.h1a": "Google Ads", "hero.h1b": "+ a website ", "hero.h1c": "as a gift",
     "hero.lead": "We set up the ads, build a selling website and manage the campaign for a month. 180,000 KZT for everything, launch in 2-4 business days.",
     "hero.btn1": "Estimate my lead cost", "hero.btn2": "Message on WhatsApp", "hero.ig": "Work and ad accounts on Instagram",
     "cs.legend": "clicks and leads by day",
-    "c1.kicker": "Case · car service · carservice01.kz", "c1.unit": "leads in 30 days", "c1.f1": "per lead", "c1.f2": "of visitors call or write", "c1.f3": "daily budget",
+    "c1.kicker": "Case · car service · carservice01.kz", "c1.unit": "leads from ads", "c1.f1": "per lead", "c1.f2": "of visitors call or write", "c1.f3": "daily budget",
     "c1.p": "A website for urgent repairs, a separate block for each service, ads pointed exactly at those blocks.", "c1.link": "Open carservice01.kz",
-    "c1.cap": "Google Ads account, 24.07-31.08.2026: 713 clicks, 189 leads at $1.80",
-    "c2.kicker": "Case · metal roofing · s-profile.kz", "c2.unit": "leads at $4.30 each", "c2.h": "Budget tripled, cost per lead stayed the same", "c2.f1": "daily budget", "c2.f2": "ad CTR", "c2.f3": "clicks in the period",
-    "c2.p": "Weekly query cleanup, bid caps, negative keywords for every ad group.", "c2.link": "Open s-profile.kz", "c2.cap": "Google Ads account, 20.07-31.08.2026: 621 clicks, 137 leads at $4.30",
-    "c3.kicker": "Case · home medical care · med-home.kz", "c3.unit": "leads in 30 days", "c3.f1": "per lead", "c3.f2": "of visitors get in touch", "c3.f3": "ad CTR",
-    "c3.p": "Precise keywords for at-home services, instant contact from the phone.", "c3.link": "Open med-home.kz", "c3.cap": "Google Ads account, 17.08-31.08.2026, first two weeks: 251 clicks, 61 leads at $2.37",
-    "t.f1": "projects", "t.f2": "new clients a month", "t.f3b": "Contract", "t.f3": "official, with a registered entrepreneur", "t.f4b": "Yours", "t.f4": "the ad account and the website stay with you",
+    "c1.live": "The campaign is still running: 235 leads in the 30 days to 05.10.2026, at $2.35 each",
+    "c1.cap": "A frame from the Google Ads account for the same period: 713 clicks, $340.57 spent",
+    "c2.kicker": "Case · metal roofing · s-profile.kz", "c2.unit": "leads from ads", "c2.h": "Budget tripled, cost per lead stayed the same", "c2.f1": "per lead", "c2.f2": "daily budget", "c2.f3": "ad CTR",
+    "c2.p": "Weekly query cleanup, bid caps, negative keywords for every ad group.", "c2.link": "Open s-profile.kz", "c2.cap": "A frame from the Google Ads account for the same period: 621 clicks, $589.27 spent",
+    "c3.kicker": "Case · home medical care · med-home.kz", "c3.unit": "leads in the first two weeks", "c3.f1": "per lead", "c3.f2": "of visitors get in touch", "c3.f3": "ad CTR",
+    "c3.p": "Precise keywords for at-home services, instant contact from the phone.", "c3.link": "Open med-home.kz",
+    "c3.live": "The campaign is still running: 157 leads in the 30 days to 05.10.2026, at $3.40 each",
+    "c3.cap": "A frame from the Google Ads account for the same period: 251 clicks, 61 conversions, $144.49 spent",
+    "t.f1": "projects", "t.f2": "new clients a month", "t.f3b": "Official contract", "t.f3": "with a registered entrepreneur, monthly renewal", "t.f4b": "The account and website are yours", "t.f4": "owner access from day one",
     "m.kicker": "More cases", "m.h2": "Nine more accounts and three design cases", "m.lead": "Cost per lead in client accounts for July-August 2026. We show the screenshots at the meeting.", "m.lider": "Lider Potolki",
     "d1.n": "pipeline valves, B2B", "d1.p": "A catalogue of 1,641 items, a plate for every category, a quote from your list in 15 minutes.",
     "d2.n": "freight from China", "d2.p": "Groupage and full loads, three routes, delivery quote straight in WhatsApp.",
@@ -33,6 +36,14 @@
     "h.kicker": "How it works", "h.h2": "How a click turns into a lead",
     "h.s1": "A search on Google", "h.s1s": "someone looks for your service", "h.s2": "Your ad on top", "h.s2s": "for that exact query", "h.s3": "A page for that query", "h.s3s": "the service block, not the homepage",
     "h.s4": "A call or WhatsApp", "h.s4s": "one-tap buttons", "h.s5": "A lead in the report", "h.s5s": "the bot sends every one",
+    "h.q": "engine repair astana", "h.adL": "Ad", "h.adT": "Engine repair in Astana", "h.adD": "Diagnostics on the day you call", "h.waT": "Hello! I need a diagnostic check",
+    "p.k1": "engine repair", "p.k2": "car diagnostics astana", "p.k3": "free", "p.k4": "oil change near me", "p.k5": "jobs", "p.k6": "diy", "p.chart": "cost per lead by week",
+    "b.t1": "channel", "b.t2": "query", "b.t3": "site block", "b.t4": "device", "b.t5": "lead code", "b.bot": "lead bot",
+    "b.m3a": "Channel: call", "b.m3b": "Query \"tyre fitting 24 hours\"", "b.m4a": "Channel: website form", "b.m4b": "\"I need a quote for three cars\"",
+    "k.d1": "1 day", "k.d15": "15 days", "k.d30": "30 days",
+    "pr.n1": "a month, management from the second month", "pr.n2b": "from $10", "pr.n2": "a day - the ad budget, paid to Google directly",
+    "f.cta": "Didn't find your question?", "f.ctaS": "Write to us, we reply on WhatsApp during business hours.", "f.ctaB": "Ask on WhatsApp",
+    "ct.c1b": "2-4 days", "ct.c1": "to launch", "ct.c2b": "180,000 KZT", "ct.c2": "ads, website and a month of management", "ct.c3b": "Every", "ct.c3": "lead is visible in the bot", "ct.ig": "Cases on Instagram",
     "p.kicker": "What's included", "p.h2": "Three jobs in one package",
     "p.r1": "Ads setup", "p.r1t": "1-3 business days", "p.r1a": "keywords and negatives", "p.r1b": "ads written for your offer", "p.r1c": "geo, schedule, bids", "p.r1d": "call, WhatsApp and form tracking",
     "p.r2": "A selling website as a gift", "p.r2t": "1-3 business days", "p.r2a": "one page built for leads", "p.r2b": "designed for the phone", "p.r2c": "basic SEO and your socials", "p.r2d": "WhatsApp and call buttons",
@@ -49,7 +60,7 @@
     "k.budget": "Daily budget", "k.r1": "clicks a month", "k.r2": "leads a month", "k.r3": "per lead",
     "k.note": "A benchmark from our accounts over the last month: median cost per click $0.69, conversion rate 9.8%. The exact figure is calculated for your city and queries.", "k.btn": "Get an exact estimate",
     "pr.kicker": "Price", "pr.cur": "KZT", "pr.h2": "for a turnkey launch", "pr.i1": "Google Ads setup", "pr.i2": "a selling website", "pr.i3": "first month of management", "pr.i4": "lead bot",
-    "pr.note": "From the second month, management is 100,000 KZT. You pay the ad budget to Google directly, starting from $10 a day. The domain and hosting are registered in your name.", "pr.btn": "Leave a request",
+    "pr.btn": "Leave a request",
     "tm.1": "The ad account is registered to you", "tm.1s": "owner access from day one", "tm.2": "The website, domain and hosting are yours", "tm.2s": "we hand over the files, we keep nothing",
     "tm.3": "The budget goes directly to Google", "tm.3s": "no markups, no middlemen", "tm.4": "A contract with a registered entrepreneur, monthly renewal", "tm.4s": "100% prepayment, no hidden fees",
     "ps.kicker": "How we work", "ps.h2": "From a call to the first leads",
@@ -63,13 +74,22 @@
     "f.q6": "Do you work outside Astana?", "f.a6": "Yes, across Kazakhstan and abroad. Meetings and revisions are online.",
     "f.q7": "Who owns the account and the website?", "f.a7": "You do, from day one. We work in your account as a manager.",
     "ct.kicker": "Request", "ct.h2": "Let's estimate a lead for your niche", "ct.lead": "Send your phone number and niche. We reply on WhatsApp during business hours.",
-    "ct.phone": "Phone (WhatsApp)", "ct.niche": "Niche and city", "ct.nichePh": "e.g. dentistry, Almaty", "ct.err": "Check the phone number: at least 10 digits.", "ct.btn": "Get an estimate",
+    "ct.phone": "Phone (WhatsApp)", "ct.niche": "Niche and city", "ct.nichePh": "e.g. dentistry, Almaty…", "skip": "Skip to content", "ct.err": "Check the phone number: at least 10 digits.", "ct.btn": "Get an estimate",
     "ct.note": "The button opens WhatsApp with a ready message. We reply during business hours.", "ct.ok": "Thanks, your request went to WhatsApp", "ct.ok2": "If the window did not open, write to us at +7 701 806 88 66",
     "ft.l": "Google Ads, websites and management. Astana, working across Kazakhstan.", "ft.c": "Sole proprietor CALIFORNIA", "st.call": "Call"
   } };
-  const RU_PH = { "ct.nichePh": "например, стоматология, Алматы", "wa.l1": "Здравствуйте! Хочу расчёт по пакету Google Ads + сайт.", "wa.l2": "Телефон:", "wa.l3": "Ниша и город:", "wa.l4": "Бюджет:", "wa.l5": "/день" };
+  const RU_PH = { "ct.nichePh": "например, стоматология, Алматы…", "wa.l1": "Здравствуйте! Хочу расчёт по пакету Google Ads + сайт.", "wa.l2": "Телефон:", "wa.l3": "Ниша и город:", "wa.l4": "Бюджет:", "wa.l5": "/день" };
+  Object.assign(I18N.en, {
+    "nav.blog": "Articles", "w.site": "Websites built for ads", "ft.site": "Website development", "ft.blog": "Articles",
+    "blog.kicker": "Articles", "blog.h2": "Ads and websites, backed by numbers", "blog.lead": "Cost per click and per lead from our clients' ad accounts, what kills conversion and how to build a page for ads.",
+    "blog.all": "All articles", "blog.read": "Read", "blog.ru": "in Russian",
+    "blog.g1": "Google Ads", "blog.g2": "Websites", "blog.g3": "Budget", "blog.m1": "8 min read", "blog.m2": "6 min read", "blog.m3": "7 min read",
+    "blog.t1": "Google Ads for business: why you get clicks but no leads", "blog.d1": "A step-by-step search campaign launch and 7 reasons clicks don't turn into calls.",
+    "blog.t2": "Landing pages: what they are and why Google Ads works better with them", "blog.d2": "How a landing page differs from a business card site, what blocks it needs and why leads get cheaper.",
+    "blog.t3": "How much Google Ads costs in Kazakhstan in 2026", "blog.d3": "Cost per click and per lead across 42 accounts, bids by niche and a starting budget.",
+  });
   Object.assign(I18N.en, { "wa.l1": "Hello! I want an estimate for the Google Ads + website package.", "wa.l2": "Phone:", "wa.l3": "Niche and city:", "wa.l4": "Budget:", "wa.l5": "/day" });
-  const META = { ru: ["ArtSign Studio - реклама в Google + сайт в подарок за 180 000 тг", "Настройка Google Ads, продающий сайт в подарок и месяц ведения за 180 000 тг. Запуск за 2-4 рабочих дня. Каждое обращение видно в боте. Астана и весь Казахстан."] };
+  const META = { ru: ["Контекстная реклама в Астане: Google Ads + сайт в подарок", "Настройка Google Ads, продающий сайт в подарок и месяц ведения за 180 000 тг. Запуск за 2-4 рабочих дня. Каждое обращение видно в боте. Астана и весь Казахстан."] };
 
   // русский словарь собираем из разметки один раз: разметка - источник правды
   $$("[data-i]").forEach((el) => { if (I18N.ru[el.dataset.i] === undefined) I18N.ru[el.dataset.i] = el.textContent; });
@@ -211,7 +231,46 @@
     })(t0);
   }
 
-  const pathEl = $("#path"), stepEls = $$(".steps li");
+  /* ---------------- путь клика: след через узлы ---------------- */
+  const scene = $("#scene");
+  const SC = { fr: [], len: 0, path: null, head: null };
+  function catmull(P) {
+    let d = `M${P[0][0].toFixed(1)} ${P[0][1].toFixed(1)}`;
+    for (let i = 0; i < P.length - 1; i++) {
+      const p0 = P[i - 1] || P[i], p1 = P[i], p2 = P[i + 1], p3 = P[i + 2] || p2;
+      d += ` C${(p1[0] + (p2[0] - p0[0]) / 6).toFixed(1)} ${(p1[1] + (p2[1] - p0[1]) / 6).toFixed(1)} ${(p2[0] - (p3[0] - p1[0]) / 6).toFixed(1)} ${(p2[1] - (p3[1] - p1[1]) / 6).toFixed(1)} ${p2[0].toFixed(1)} ${p2[1].toFixed(1)}`;
+    }
+    return d;
+  }
+  let scBuilt = false;
+  const sceneDirty = () => { scBuilt = false; onScroll(); };
+  function buildScene() {
+    if (!scene) return;
+    scBuilt = true;
+    const sr = scene.getBoundingClientRect(), svg = $(".scene-svg", scene);
+    const pts = $$(".node .dot", scene).map((d) => { const r = d.getBoundingClientRect(); return [r.left + r.width / 2 - sr.left, r.top + r.height / 2 - sr.top]; });
+    if (pts.length < 2 || !sr.width) return;
+    const vertical = Math.abs(pts[1][1] - pts[0][1]) > Math.abs(pts[1][0] - pts[0][0]);
+    const n = pts.length - 1;
+    const all = vertical
+      ? [[pts[0][0], Math.max(0, pts[0][1] - 70)], ...pts, [pts[n][0], pts[n][1] + 50]]
+      : [[-24, pts[0][1] + 30], ...pts, [sr.width + 24, pts[n][1] - 30]];
+    svg.setAttribute("viewBox", `0 0 ${sr.width.toFixed(0)} ${sr.height.toFixed(0)}`);
+    const d = catmull(all);
+    const ln = $(".sc-line", scene), gh = $(".sc-ghost", scene);
+    ln.setAttribute("d", d); gh.setAttribute("d", d);
+    SC.path = ln; SC.head = $(".sc-head", scene); SC.len = ln.getTotalLength();
+    // доля длины пути до каждого узла
+    const N = 160, samp = [];
+    for (let i = 0; i <= N; i++) { const q = ln.getPointAtLength(SC.len * i / N); samp.push([q.x, q.y]); }
+    SC.fr = pts.map(([x, y]) => { let b = 0, bd = 1e9; samp.forEach(([sx, sy], i) => { const dd = (sx - x) ** 2 + (sy - y) ** 2; if (dd < bd) { bd = dd; b = i; } }); return b / N; });
+    ln.setAttribute("pathLength", "1");
+  }
+  const nodeEls = $$(".node");
+  const tg = $("#tg"), msgEls = $$("#tg .msg");
+  const proc = $("#proc"), procEls = $$("#proc li");
+  const contact = $("#contact");
+
   let ticking = false;
   function update() {
     ticking = false;
@@ -219,7 +278,9 @@
     const enters = pws.map((pw) => { const r = pw.getBoundingClientRect(); return { r, enter: clamp(1 - r.top / H) }; });
     pws.forEach((pw, i) => {
       const { r, enter } = enters[i];
-      const stay = r.height > H + 1 ? clamp(-r.top / (r.height - H)) : 0;
+      const hold = pw.classList.contains("stack") ? H : 0;
+      const span = r.height - hold - H;
+      const stay = span > 1 ? clamp(-r.top / span) : 0;
       const exit = i + 1 < pws.length ? enters[i + 1].enter : 0;
       const open = easeOut(clamp((enter - .3) / .7));
       pw.style.setProperty("--enter", enter.toFixed(4));
@@ -227,20 +288,43 @@
       pw.style.setProperty("--exit", exit.toFixed(4));
       pw.style.setProperty("--open", open.toFixed(4));
       pw.classList.toggle("gone", exit >= 1);
-      const txt = $(".txt", pw); if (txt && enter > .5) txt.classList.add("on");
-      if (open > .4) { const num = $(".num", pw); if (num) countUp(num); }
+      const txt = $(".txt", pw); if (txt && enter > .1) txt.classList.add("on");
+      if (open > .3) { const num = $(".num", pw); if (num) countUp(num); }
     });
     // липкая панель: после 55% первого экрана, прячется на контактах
-    const ct = $("#contact").getBoundingClientRect();
+    const ct = contact.getBoundingClientRect();
     sticky.classList.toggle("is-on", scrollY > H * .55 && ct.top > H * .6);
     hdr.classList.toggle("is-scrolled", scrollY > 8);
-    // путь клика
-    if (pathEl) {
-      const r = pathEl.getBoundingClientRect();
-      const p = clamp((H * .82 - r.top) / Math.min(r.height, H * .55));
-      pathEl.style.setProperty("--p", p.toFixed(4));
-      stepEls.forEach((li, i) => li.classList.toggle("lit", p > (i + .3) / stepEls.length));
+    // путь клика: голова следа и узлы
+    if (scene) {
+      const r = scene.getBoundingClientRect();
+      if (!scBuilt && r.top < H * 1.6 && r.bottom > -H) buildScene();
+      if (SC.path && r.bottom > -100 && r.top < H + 100) {
+        const p = REDUCED ? 1 : clamp((H * .72 - r.top) / (r.height * .92));
+        scene.style.setProperty("--p", p.toFixed(4));
+        const q = SC.path.getPointAtLength(SC.len * p);
+        SC.head.setAttribute("cx", q.x.toFixed(1)); SC.head.setAttribute("cy", q.y.toFixed(1));
+        nodeEls.forEach((el, i) => {
+          el.classList.toggle("lit", p >= SC.fr[i] - .004);
+          if (i === 0) el.style.setProperty("--k", clamp(p / Math.max(.05, (SC.fr[1] || .2) * .85)).toFixed(3));
+        });
+      }
     }
+    // бот: уведомления прилетают по одному
+    if (tg) {
+      const r = tg.getBoundingClientRect();
+      const p = REDUCED ? 1 : clamp((H * .88 - r.top) / (r.height * .7));
+      msgEls.forEach((m, i) => m.classList.toggle("on", p > .06 + i * .22));
+    }
+    // процесс: линия и шаги
+    if (proc) {
+      const r = proc.getBoundingClientRect();
+      const p = REDUCED ? 1 : clamp((H * .8 - r.top) / (r.height + H * .25));
+      proc.style.setProperty("--p", p.toFixed(4));
+      procEls.forEach((li, i) => li.classList.toggle("lit", p >= i / procEls.length + .01));
+    }
+    // финальный экран: след сходится к форме
+    if (ct.top < H && ct.bottom > 0) contact.style.setProperty("--p", (REDUCED ? 1 : clamp((H - ct.top) / (ct.height * .75))).toFixed(4));
   }
   function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
   addEventListener("scroll", onScroll, { passive: true });
@@ -278,6 +362,8 @@
   /* ---------------- проявление ---------------- */
   const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -8% 0px" });
   $$(".rv").forEach((el) => io.observe(el));
+  const ioN = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { countUp(e.target); ioN.unobserve(e.target); } }), { threshold: .6 });
+  $$(".cnt").forEach((el) => ioN.observe(el));
 
   /* ---------------- лента работ ---------------- */
   function lane(root, prevBtn, nextBtn) {
@@ -311,19 +397,48 @@
   const nicheSel = $("#niche"), budget = $("#budget"), budgetOut = $("#budgetOut");
   const fmt = (n) => Math.round(n).toLocaleString(LANG === "en" ? "en-US" : "ru-RU");
   const money = (n) => "$" + (n < 10 ? n.toFixed(2) : n.toFixed(1)).replace(".", LANG === "en" ? "." : ",");
+  const meterSvg = $("#meterSvg"), mBand = $(".m-band"), mLn = $(".m-ln"), mDot = $(".m-dot");
+  const M = { cur: null, to: null, t0: 0, raf: 0 };
+  const leadsAt = (b, k) => b * 30 / (.69 * k[0]) * (.098 * k[1]);
+  function drawMeter(v) {
+    if (!meterSvg) return;
+    const W = 600, Ht = 240, N = 30, top = 14;
+    const y = (val, t) => Ht - 2 - (val * Math.pow(t, 1.12) / v.ymax) * (Ht - top - 2);
+    const pts = (val) => Array.from({ length: N + 1 }, (_, i) => [W * i / N, y(val, i / N)]);
+    const hi = pts(v.hi), lo = pts(v.lo).reverse(), mid = pts((v.hi + v.lo) / 2);
+    const P = (a) => a.map(([x, yy], i) => (i ? "L" : "M") + x.toFixed(1) + " " + yy.toFixed(1)).join(" ");
+    mBand.setAttribute("d", P(hi) + " " + P(lo).replace("M", "L") + " Z");
+    mLn.setAttribute("d", P(mid));
+    const sr = meterSvg.getBoundingClientRect(), pr = mDot.parentNode.getBoundingClientRect();
+    mDot.style.top = (sr.top - pr.top + mid[N][1] / Ht * (sr.height || 210)).toFixed(1) + "px";
+  }
+  function showCalc(v) {
+    $("#rClicks").textContent = "~" + fmt(v.clicks);
+    $("#rLeads").textContent = fmt(v.lo) + "-" + fmt(v.hi);
+    $("#rCpl").textContent = money(v.cpl * .8) + "-" + money(v.cpl * 1.3);
+    drawMeter(v);
+  }
   function calcRun() {
     if (!nicheSel) return;
     const k = NICHE[nicheSel.value] || NICHE.other, b = +budget.value;
     const cpc = .69 * k[0], cr = .098 * k[1];
-    const clicks = b * 30 / cpc, leads = clicks * cr, cpl = cpc / cr;
+    const clicks = b * 30 / cpc, leads = clicks * cr;
     budgetOut.value = "$" + b;
     budget.style.setProperty("--fill", ((b - 5) / 45 * 100).toFixed(1) + "%");
-    $("#rClicks").textContent = "~" + fmt(clicks);
-    $("#rLeads").textContent = fmt(leads * .75) + "-" + fmt(leads * 1.25);
-    $("#rCpl").textContent = money(cpl * .8) + "-" + money(cpl * 1.3);
+    const to = { clicks, lo: leads * .75, hi: leads * 1.25, cpl: cpc / cr, ymax: Math.max(leads * 1.25 * 1.1, leadsAt(18, k) * 1.25 * 1.05) };
+    if (!M.cur || REDUCED) { M.cur = to; showCalc(to); return; }
+    const from = Object.assign({}, M.cur); M.t0 = performance.now();
+    cancelAnimationFrame(M.raf);
+    (function tick(now) {
+      const t = easeOut(clamp((now - M.t0) / 520));
+      const v = {}; Object.keys(to).forEach((key) => { v[key] = from[key] + (to[key] - from[key]) * t; });
+      v.cpl = to.cpl; M.cur = v; showCalc(v);
+      if (t < 1) M.raf = requestAnimationFrame(tick);
+    })(M.t0);
   }
   if (nicheSel) {
     nicheSel.addEventListener("change", calcRun); budget.addEventListener("input", calcRun); calcRun();
+    addEventListener("resize", () => M.cur && drawMeter(M.cur));
     $("#calcForm").addEventListener("submit", (e) => {
       e.preventDefault();
       const nicheTxt = nicheSel.options[nicheSel.selectedIndex].textContent;
@@ -363,12 +478,13 @@
   }
   document.fonts && document.fonts.ready.then(fitText);
   const _applyLang = applyLang;
-  applyLang = function (l) { _applyLang(l); fitText(); };
+  applyLang = function (l) { _applyLang(l); fitText(); requestAnimationFrame(sceneDirty); };
 
   /* ---------------- старт ---------------- */
   function layout() { fitText(); setupMarq(); update(); }
-  addEventListener("resize", () => { fitText(); setupMarq(); });
-  addEventListener("load", () => { setupMarq(); fitText(); });
+  addEventListener("resize", () => { fitText(); setupMarq(); sceneDirty(); });
+  addEventListener("load", () => { setupMarq(); fitText(); sceneDirty(); });
+  document.fonts && document.fonts.ready.then(sceneDirty);
   layout();
   initLang();
   if (hasHash) { scrollToId(location.hash.slice(1), true); setTimeout(() => { scrollToId(location.hash.slice(1), true); update(); }, 300); }
