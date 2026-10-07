@@ -40,7 +40,7 @@
     "p.k1": "engine repair", "p.k2": "car diagnostics astana", "p.k3": "free", "p.k4": "oil change near me", "p.k5": "jobs", "p.k6": "diy", "p.chart": "cost per lead by week",
     "b.t1": "channel", "b.t2": "query", "b.t3": "site block", "b.t4": "device", "b.t5": "lead code", "b.bot": "lead bot",
     "b.m3a": "Channel: call", "b.m3b": "Query \"tyre fitting 24 hours\"", "b.m4a": "Channel: website form", "b.m4b": "\"I need a quote for three cars\"",
-    "k.d1": "1 day", "k.d15": "15 days", "k.d30": "30 days",
+    "k.d1": "1 day", "k.d15": "15 days", "k.d30": "30 days", "k.month": "Your month: each block is one lead", "k.perday": "a day", "k.of100": "out of 100 site visitors call or message",
     "pr.n1": "a month, management from the second month", "pr.n2b": "from $10", "pr.n2": "a day - the ad budget, paid to Google directly",
     "f.cta": "Didn't find your question?", "f.ctaS": "Write to us, we reply on WhatsApp during business hours.", "f.ctaB": "Ask on WhatsApp",
     "ct.c1b": "2-4 days", "ct.c1": "to launch", "ct.c2b": "180,000 KZT", "ct.c2": "ads, website and a month of management", "ct.c3b": "Every", "ct.c3": "lead is visible in the bot", "ct.ig": "Cases on Instagram",
@@ -156,19 +156,35 @@
   window.addEventListener("popstate", () => { if (location.hash) scrollToId(location.hash.slice(1)); });
 
   /* ---------------- герой: стена сайтов ---------------- */
+  // каждый сайт на стене один раз: 13 из портфолио + 18 других наших проектов (кадры в assets/works/wall)
   const WORKS = ["sutora", "mypatent", "pslgroup", "zhantore", "ahpartners", "sunsara", "kelebek", "legalresource", "hotelcomfort", "provar", "asphalttau", "carservice", "armgrant"];
+  const WALL = ["shanyraq", "craneengineering", "bestshine", "nisada", "trioclinic", "bigpower", "strongsteel", "lineo", "aig", "deekeyz", "skyspace", "tautasbeton", "remontkz", "electroservice", "coolklimat", "aeckazakhstan", "adrenaline"];
+  const WALL_M = ["sollmarine", "craneengineering", "bestshine", "shanyraq", "deekeyz", "strongsteel", "tautasbeton", "trioclinic", "bigpower", "lineo", "skyspace", "nisada", "aig", "remontkz", "electroservice", "adrenaline", "coolklimat", "aeckazakhstan"];
   function buildWall() {
     const wall = $("#wall"); if (!wall) return;
+    const tile = (k, src) => [k, src];
+    const desk = [], mob = [];
+    const n = Math.max(WORKS.length, WALL.length);
+    for (let i = 0; i < n; i++) {
+      if (WORKS[i]) desk.push(tile("d", `assets/works/${WORKS[i]}.webp`));
+      if (WALL[i]) desk.push(tile("d", `assets/works/wall/${WALL[i]}.webp`));
+    }
+    WALL_M.forEach((w) => mob.push(tile("m", `assets/works/wall/${w}-m.webp`)));
+    // телефоны из портфолио - только те, чьих сайтов нет среди телефонов выше
+    ["kelebek", "sutora", "mypatent", "zhantore", "provar", "hotelcomfort", "sunsara", "carservice"].forEach((w) => mob.push(tile("m", `assets/works/m/${w}.webp`)));
     const tiles = [];
-    WORKS.forEach((n, i) => { tiles.push([n, "d"]); tiles.push([WORKS[(i + 7) % WORKS.length], "m"]); });
+    for (let i = 0; i < Math.max(desk.length, mob.length * 2); i++) {
+      if (desk[i]) tiles.push(desk[i]);
+      if (i % 2 === 1 && mob[(i - 1) / 2]) tiles.push(mob[(i - 1) / 2]);
+    }
     const cols = [[], [], [], []];
     tiles.forEach((t, i) => cols[i % 4].push(t));
     wall.innerHTML = cols.map((col) => {
-      const one = (lazy) => col.map(([n, k], i) => {
+      const one = (lazy) => col.map(([k, src], i) => {
         const at = lazy || i > 2 ? 'loading="lazy"' : (i === 0 ? 'fetchpriority="high"' : "");
         return k === "d"
-          ? `<div class="wtile d"><img src="assets/works/${n}.webp" width="880" height="550" alt="" ${at} decoding="async"></div>`
-          : `<div class="wtile m"><img src="assets/works/m/${n}.webp" width="360" height="720" alt="" ${at} decoding="async"></div>`;
+          ? `<div class="wtile d"><img src="${src}" width="880" height="550" alt="" ${at} decoding="async"></div>`
+          : `<div class="wtile m"><img src="${src}" width="360" height="720" alt="" ${at} decoding="async"></div>`;
       }).join("");
       return `<div class="wcol"><div class="wtrack">${one(false)}${one(true)}</div></div>`;
     }).join("");
@@ -184,24 +200,57 @@
     medhome: { a: [[0.02,0.37],[0.03,0.38],[0.05,0.43],[0.07,0.48],[0.1,0.58],[0.13,0.69],[0.15,0.76],[0.18,0.74],[0.2,0.72],[0.23,0.71],[0.26,0.71],[0.28,0.7],[0.31,0.76],[0.32,0.78],[0.36,0.91],[0.37,0.87],[0.41,0.78],[0.43,0.74],[0.47,0.79],[0.49,0.82],[0.54,0.82],[0.56,0.81],[0.59,0.72],[0.62,0.6],[0.64,0.51],[0.67,0.49],[0.69,0.52],[0.72,0.52],[0.73,0.52],[0.77,0.52],[0.8,0.52],[0.82,0.53],[0.93,0.53],[0.94,0.52]],
       b: [[0.04,0.36],[0.08,0.38],[0.11,0.43],[0.13,0.47],[0.15,0.52],[0.18,0.58],[0.2,0.66],[0.23,0.69],[0.26,0.67],[0.29,0.66],[0.3,0.73],[0.33,0.84],[0.36,0.96],[0.38,0.91],[0.41,0.85],[0.46,0.83],[0.49,0.84],[0.51,0.82],[0.55,0.74],[0.56,0.71],[0.59,0.65],[0.62,0.57],[0.64,0.53],[0.67,0.54],[0.7,0.56],[0.72,0.57],[0.74,0.56],[0.76,0.55],[0.79,0.54],[0.82,0.54],[0.84,0.54],[0.87,0.54],[0.9,0.53],[0.93,0.52],[0.95,0.49],[0.96,0.47]] }
   };
-  function smoothPath(pts, W, H) {
-    const P = pts.map(([x, y]) => [x * W, H - y * H * .86 - H * .06]);
-    let d = `M${P[0][0].toFixed(1)} ${P[0][1].toFixed(1)}`;
-    for (let i = 0; i < P.length - 1; i++) {
-      const p0 = P[i - 1] || P[i], p1 = P[i], p2 = P[i + 1], p3 = P[i + 2] || p2;
-      const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
-      const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
-      d += ` C${c1[0].toFixed(1)} ${c1[1].toFixed(1)} ${c2[0].toFixed(1)} ${c2[1].toFixed(1)} ${p2[0].toFixed(1)} ${p2[1].toFixed(1)}`;
+  // точки снимались с кадра кабинета вручную и стоят неровно: сводим на ровную сетку дней
+  // и ведём монотонной кривой - без петель и выбросов между соседними точками
+  function resample(pts, n) {
+    const out = [], x0 = pts[0][0], x1 = pts[pts.length - 1][0];
+    for (let i = 0; i < n; i++) {
+      const x = x0 + (x1 - x0) * i / (n - 1);
+      let j = 0; while (j < pts.length - 2 && pts[j + 1][0] < x) j++;
+      const [ax, ay] = pts[j], [bx, by] = pts[j + 1], t = bx > ax ? clamp((x - ax) / (bx - ax)) : 0;
+      out.push([x, ay + (by - ay) * t]);
     }
-    return { d, last: P[P.length - 1], first: P[0] };
+    return out;
+  }
+  function smoothPath(pts, W, H) {
+    const P = resample(pts, 44).map(([x, y]) => [(x - pts[0][0]) / (pts[pts.length - 1][0] - pts[0][0]) * W, H - y * H * .82 - H * .06]);
+    const n = P.length, d = [], m = [];
+    for (let i = 0; i < n - 1; i++) d.push((P[i + 1][1] - P[i][1]) / (P[i + 1][0] - P[i][0]));
+    m.push(d[0]);
+    for (let i = 1; i < n - 1; i++) m.push(d[i - 1] * d[i] <= 0 ? 0 : (d[i - 1] + d[i]) / 2);
+    m.push(d[n - 2]);
+    for (let i = 0; i < n - 1; i++) {
+      if (!d[i]) { m[i] = m[i + 1] = 0; continue; }
+      const a = m[i] / d[i], b = m[i + 1] / d[i], h = a * a + b * b;
+      if (h > 9) { const t = 3 / Math.sqrt(h); m[i] = t * a * d[i]; m[i + 1] = t * b * d[i]; }
+    }
+    const f = (v) => v.toFixed(1);
+    let path = `M${f(P[0][0])} ${f(P[0][1])}`;
+    for (let i = 0; i < n - 1; i++) {
+      const dx = (P[i + 1][0] - P[i][0]) / 3;
+      path += ` C${f(P[i][0] + dx)} ${f(P[i][1] + m[i] * dx)} ${f(P[i + 1][0] - dx)} ${f(P[i + 1][1] - m[i + 1] * dx)} ${f(P[i + 1][0])} ${f(P[i + 1][1])}`;
+    }
+    return { d: path, last: P[n - 1], first: P[0] };
   }
   $$(".chart").forEach((box) => {
     const data = CHARTS[box.dataset.chart]; if (!data) return;
     const W = 1000, H = 400;
     const A = smoothPath(data.a, W, H), B = smoothPath(data.b, W, H);
     const grid = [0.25, 0.5, 0.75].map((g) => `<line x1="0" x2="${W}" y1="${(H * g).toFixed(0)}" y2="${(H * g).toFixed(0)}"/>`).join("");
-    box.innerHTML = `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none"><g class="grid">${grid}</g><path class="area" d="${A.d} L${A.last[0].toFixed(1)} ${H} L${A.first[0].toFixed(1)} ${H} Z"/><path class="ln2" pathLength="1" d="${B.d}"/><path class="ln" pathLength="1" d="${A.d}"/><circle class="dot" cx="${A.last[0].toFixed(1)}" cy="${A.last[1].toFixed(1)}" r="4"/></svg>`;
+    box.innerHTML = `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none"><g class="grid">${grid}</g><path class="area" d="${A.d} L${W} ${H} L0 ${H} Z"/><path class="ln2" d="${B.d}"/><path class="ln" d="${A.d}"/></svg><i class="ch-dot" style="top:${(A.last[1] / H * 100).toFixed(2)}%"></i>`;
   });
+  // график занимает место под текстом кейса и не заходит на него
+  function fitCharts() {
+    $$(".case").forEach((pl) => {
+      const box = $(".chart", pl); if (!box) return;
+      const r = pl.getBoundingClientRect(), k = r.height / pl.clientHeight || 1;
+      let low = 0;
+      $$(".case-txt > *, .proof", pl).forEach((el) => { if (el.offsetParent) low = Math.max(low, (el.getBoundingClientRect().bottom - r.top) / k); });
+      const h = pl.clientHeight, minH = Math.min(150, h * .2);
+      const t = Math.min(Math.max(low + 28, h * .5), h - minH);
+      pl.style.setProperty("--ch-top", Math.round(t) + "px");
+    });
+  }
 
   /* ---------------- механика плит ---------------- */
   const pws = $$(".pw");
@@ -397,26 +446,35 @@
   const nicheSel = $("#niche"), budget = $("#budget"), budgetOut = $("#budgetOut");
   const fmt = (n) => Math.round(n).toLocaleString(LANG === "en" ? "en-US" : "ru-RU");
   const money = (n) => "$" + (n < 10 ? n.toFixed(2) : n.toFixed(1)).replace(".", LANG === "en" ? "." : ",");
-  const meterSvg = $("#meterSvg"), mBand = $(".m-band"), mLn = $(".m-ln"), mDot = $(".m-dot");
-  const M = { cur: null, to: null, t0: 0, raf: 0 };
-  const leadsAt = (b, k) => b * 30 / (.69 * k[0]) * (.098 * k[1]);
-  function drawMeter(v) {
-    if (!meterSvg) return;
-    const W = 600, Ht = 240, N = 30, top = 14;
-    const y = (val, t) => Ht - 2 - (val * Math.pow(t, 1.12) / v.ymax) * (Ht - top - 2);
-    const pts = (val) => Array.from({ length: N + 1 }, (_, i) => [W * i / N, y(val, i / N)]);
-    const hi = pts(v.hi), lo = pts(v.lo).reverse(), mid = pts((v.hi + v.lo) / 2);
-    const P = (a) => a.map(([x, yy], i) => (i ? "L" : "M") + x.toFixed(1) + " " + yy.toFixed(1)).join(" ");
-    mBand.setAttribute("d", P(hi) + " " + P(lo).replace("M", "L") + " Z");
-    mLn.setAttribute("d", P(mid));
-    const sr = meterSvg.getBoundingClientRect(), pr = mDot.parentNode.getBoundingClientRect();
-    mDot.style.top = (sr.top - pr.top + mid[N][1] / Ht * (sr.height || 210)).toFixed(1) + "px";
+  const monthGrid = $("#monthGrid"), crowd = $("#crowd");
+  const M = { cur: null, to: null, t0: 0, raf: 0, sig: "" };
+  // ритм недели: в выходные обращений меньше; лёгкий разброс по дням, чтобы месяц не выглядел линейкой
+  const DAYF = Array.from({ length: 30 }, (_, i) => (i % 7 === 5 || i % 7 === 6 ? .72 : 1.08) * (1 + .22 * Math.sin(i * 2.3) * Math.cos(i * .7)));
+  const DAYN = DAYF.reduce((x, y) => x + y, 0) / 30;
+  if (crowd) crowd.innerHTML = "<i></i>".repeat(100);
+  function drawMonth(v) {
+    if (!monthGrid) return;
+    const per = (v.lo + v.hi) / 2 / 30;
+    const days = DAYF.map((f) => Math.max(0, Math.round(per * f / DAYN)));
+    const sig = days.join(",");
+    if (sig === M.sig) return; M.sig = sig;
+    const max = Math.max(...days, 1);
+    monthGrid.style.setProperty("--rows", max);
+    monthGrid.innerHTML = days.map((n) => `<span>${"<i></i>".repeat(n)}</span>`).join("");
+  }
+  function drawCrowd(cr) {
+    if (!crowd) return;
+    const lit = Math.round(cr * 100);
+    $$("i", crowd).forEach((d, i) => d.classList.toggle("on", i < lit));
+    $("#rCr").textContent = lit;
   }
   function showCalc(v) {
     $("#rClicks").textContent = "~" + fmt(v.clicks);
     $("#rLeads").textContent = fmt(v.lo) + "-" + fmt(v.hi);
     $("#rCpl").textContent = money(v.cpl * .8) + "-" + money(v.cpl * 1.3);
-    drawMeter(v);
+    const per = (v.lo + v.hi) / 2 / 30;
+    $("#rDay").textContent = "~" + (per < 10 ? per.toFixed(1).replace(".", LANG === "en" ? "." : ",").replace(/[.,]0$/, "") : Math.round(per));
+    drawMonth(v);
   }
   function calcRun() {
     if (!nicheSel) return;
@@ -425,7 +483,8 @@
     const clicks = b * 30 / cpc, leads = clicks * cr;
     budgetOut.value = "$" + b;
     budget.style.setProperty("--fill", ((b - 5) / 45 * 100).toFixed(1) + "%");
-    const to = { clicks, lo: leads * .75, hi: leads * 1.25, cpl: cpc / cr, ymax: Math.max(leads * 1.25 * 1.1, leadsAt(18, k) * 1.25 * 1.05) };
+    const to = { clicks, lo: leads * .75, hi: leads * 1.25, cpl: cpc / cr };
+    drawCrowd(cr);
     if (!M.cur || REDUCED) { M.cur = to; showCalc(to); return; }
     const from = Object.assign({}, M.cur); M.t0 = performance.now();
     cancelAnimationFrame(M.raf);
@@ -438,7 +497,6 @@
   }
   if (nicheSel) {
     nicheSel.addEventListener("change", calcRun); budget.addEventListener("input", calcRun); calcRun();
-    addEventListener("resize", () => M.cur && drawMeter(M.cur));
     $("#calcForm").addEventListener("submit", (e) => {
       e.preventDefault();
       const nicheTxt = nicheSel.options[nicheSel.selectedIndex].textContent;
@@ -476,14 +534,14 @@
     const over = () => $$(":scope > span", h1).some((s) => s.scrollWidth > h1.clientWidth + 1);
     while (over() && guard++ < 14) { size *= .95; h1.style.fontSize = size.toFixed(1) + "px"; }
   }
-  document.fonts && document.fonts.ready.then(fitText);
+  document.fonts && document.fonts.ready.then(() => { fitText(); fitCharts(); });
   const _applyLang = applyLang;
-  applyLang = function (l) { _applyLang(l); fitText(); requestAnimationFrame(sceneDirty); };
+  applyLang = function (l) { _applyLang(l); fitText(); fitCharts(); requestAnimationFrame(sceneDirty); };
 
   /* ---------------- старт ---------------- */
-  function layout() { fitText(); setupMarq(); update(); }
-  addEventListener("resize", () => { fitText(); setupMarq(); sceneDirty(); });
-  addEventListener("load", () => { setupMarq(); fitText(); sceneDirty(); });
+  function layout() { fitText(); fitCharts(); setupMarq(); update(); }
+  addEventListener("resize", () => { fitText(); fitCharts(); setupMarq(); sceneDirty(); });
+  addEventListener("load", () => { setupMarq(); fitText(); fitCharts(); sceneDirty(); });
   document.fonts && document.fonts.ready.then(sceneDirty);
   layout();
   initLang();
