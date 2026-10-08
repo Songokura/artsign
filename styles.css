@@ -1151,3 +1151,8 @@ html[lang="kk"] .story > div { grid-template-columns: 150px 1fr; }
   .fn-bud { display: none; }
   .hero.lt .hero-scrim { background: linear-gradient(180deg, rgba(238, 241, 247, .7) 0%, rgba(238, 241, 247, .15) 18%, rgba(238, 241, 247, .85) 36%, rgba(238, 241, 247, .97) 46%, #EEF1F7 60%); }
 }
+/* ещё кейсы: имя и число обращений под ним */
+.cpl-n { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; }
+.cpl-n small { font-size: 12.5px; color: var(--mute); opacity: .85; white-space: nowrap; }
+.cpl-n small span { font-size: inherit; }
+@media (max-width: 760px) { .case .chart-meta { display: none; } }
