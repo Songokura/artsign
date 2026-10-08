@@ -28,11 +28,11 @@
     "c3.p": "Precise keywords for at-home services, instant contact from the phone.", "c3.link": "Open med-home.kz",
     "c3.live": "The campaign is still running: 157 leads in the 30 days to 05.10.2026, at $3.40 each",
     "c3.cap": "A frame from the Google Ads account for the same period: 251 clicks, 61 conversions, $144.49 spent",
-    "t.f1": "projects", "t.f2": "new clients a month", "t.f3b": "Official contract", "t.f3": "with a registered entrepreneur, monthly renewal", "t.f4b": "The account and website are yours", "t.f4": "owner access from day one",
+    "t.f1": "projects", "t.tools": "We work in Google tools", "t.ads": "campaigns, bids, conversions", "t.gsc": "indexing and site search", "h.photo": "Your client is already searching on Google", "ct.city": "Astana", "ct.cityS": "we work across Kazakhstan, meetings and edits online", "t.f2": "new clients a month", "t.f3b": "Official contract", "t.f3": "with a registered entrepreneur, monthly renewal", "t.f4b": "The account and website are yours", "t.f4": "owner access from day one",
     "m.kicker": "More cases", "m.h2": "Nine more accounts and three design cases", "m.lead": "Cost per lead in client accounts for July-August 2026. We show the screenshots at the meeting.", "m.lider": "Lider Potolki",
     "d1.n": "pipeline valves, B2B", "d1.p": "A catalogue of 1,641 items, a plate for every category, a quote from your list in 15 minutes.",
-    "d2.n": "freight from China", "d2.p": "Groupage and full loads, three routes, delivery quote straight in WhatsApp.",
-    "d3.n": "door hardware", "d3.p": "Wholesale and retail on one page, a catalogue with prices and a discount request.",
+    "d2.n": "facade works, Astana", "d2.p": "Ventilated facades, panels and lamellas: every service in its own block for ads.",
+    "d3.n": "crane manufacturing", "d3.p": "Cranes from 0.5 to 200 t and steel structures: a catalogue and a quote request from the phone.",
     "h.kicker": "How it works", "h.h2": "How a click turns into a lead",
     "h.s1": "A search on Google", "h.s1s": "someone looks for your service", "h.s2": "Your ad on top", "h.s2s": "for that exact query", "h.s3": "A page for that query", "h.s3s": "the service block, not the homepage",
     "h.s4": "A call or WhatsApp", "h.s4s": "one-tap buttons", "h.s5": "A lead in the report", "h.s5s": "the bot sends every one",
@@ -46,7 +46,7 @@
     "ct.c1b": "2-4 days", "ct.c1": "to launch", "ct.c2b": "180,000 KZT", "ct.c2": "ads, website and a month of management", "ct.c3b": "Every", "ct.c3": "lead is visible in the bot", "ct.ig": "Cases on Instagram",
     "p.kicker": "What's included", "p.h2": "Three jobs in one package",
     "p.r1": "Ads setup", "p.r1t": "1-3 business days", "p.r1a": "keywords and negatives", "p.r1b": "ads written for your offer", "p.r1c": "geo, schedule, bids", "p.r1d": "call, WhatsApp and form tracking",
-    "p.r2": "A selling website as a gift", "p.r2t": "1-3 business days", "p.r2a": "one page built for leads", "p.r2b": "designed for the phone", "p.r2c": "basic SEO and your socials", "p.r2d": "WhatsApp and call buttons",
+    "p.r2": "A selling website as a gift", "p.r2t": "1-3 business days", "p.r2a": "one page built for leads", "p.r2b": "designed for the phone", "p.r2c": "basic SEO, Search Console and your socials", "p.r2d": "WhatsApp and call buttons",
     "p.r3": "A month of management", "p.r3t": "included", "p.r3a": "weekly query cleanup", "p.r3b": "cut the weak, boost the strong", "p.r3c": "cost-per-lead control", "p.r3d": "short recommendations on leads",
     "b.kicker": "Lead bot", "b.h2": "You see every lead, not just clicks", "b.lead": "The bot sends every call, WhatsApp message and form to Telegram: when, from where and for which query. Once a week, a summary.", "b.badge": "included",
     "b.m1t": "New lead", "b.m1a": "Channel: WhatsApp", "b.m1b": "Source: Google Ads, query \"engine repair astana\"", "b.m1c": "Site block: diagnostics", "b.m1d": "Device: phone",
@@ -157,28 +157,21 @@
 
   /* ---------------- герой: стена сайтов ---------------- */
   // каждый сайт на стене один раз: 13 из портфолио + 18 других наших проектов (кадры в assets/works/wall)
-  const WORKS = ["sutora", "mypatent", "pslgroup", "zhantore", "ahpartners", "sunsara", "kelebek", "legalresource", "hotelcomfort", "provar", "asphalttau", "carservice", "armgrant"];
-  const WALL = ["shanyraq", "craneengineering", "bestshine", "nisada", "trioclinic", "bigpower", "strongsteel", "lineo", "aig", "deekeyz", "skyspace", "tautasbeton", "remontkz", "electroservice", "coolklimat", "aeckazakhstan", "adrenaline"];
-  const WALL_M = ["sollmarine", "craneengineering", "bestshine", "shanyraq", "deekeyz", "strongsteel", "tautasbeton", "trioclinic", "bigpower", "lineo", "skyspace", "nisada", "aig", "remontkz", "electroservice", "adrenaline", "coolklimat", "aeckazakhstan"];
+  // на стене только проекты, которых нет ниже по странице (лента работ, дизайн-кейсы, «Что входит»)
+  const WALL = ["bestshine", "nisada", "trioclinic", "bigpower", "strongsteel", "aig", "deekeyz", "tautasbeton", "remontkz", "electroservice", "coolklimat", "aeckazakhstan", "adrenaline"];
+  const WALL_M = ["sollmarine", "bestshine", "deekeyz", "strongsteel", "tautasbeton", "trioclinic", "bigpower", "nisada", "aig", "remontkz", "electroservice", "adrenaline", "coolklimat", "aeckazakhstan"];
   function buildWall() {
     const wall = $("#wall"); if (!wall) return;
     const tile = (k, src) => [k, src];
-    const desk = [], mob = [];
-    const n = Math.max(WORKS.length, WALL.length);
-    for (let i = 0; i < n; i++) {
-      if (WORKS[i]) desk.push(tile("d", `assets/works/${WORKS[i]}.webp`));
-      if (WALL[i]) desk.push(tile("d", `assets/works/wall/${WALL[i]}.webp`));
-    }
-    WALL_M.forEach((w) => mob.push(tile("m", `assets/works/wall/${w}-m.webp`)));
-    // телефоны из портфолио - только те, чьих сайтов нет среди телефонов выше
-    ["kelebek", "sutora", "mypatent", "zhantore", "provar", "hotelcomfort", "sunsara", "carservice"].forEach((w) => mob.push(tile("m", `assets/works/m/${w}.webp`)));
+    const desk = WALL.map((w) => tile("d", `assets/works/wall/${w}.webp`));
+    const mob = WALL_M.map((w) => tile("m", `assets/works/wall/${w}-m.webp`));
     const tiles = [];
     for (let i = 0; i < Math.max(desk.length, mob.length * 2); i++) {
       if (desk[i]) tiles.push(desk[i]);
       if (i % 2 === 1 && mob[(i - 1) / 2]) tiles.push(mob[(i - 1) / 2]);
     }
-    const cols = [[], [], [], []];
-    tiles.forEach((t, i) => cols[i % 4].push(t));
+    const cols = [[], [], []];
+    tiles.forEach((t, i) => cols[i % 3].push(t));
     wall.innerHTML = cols.map((col) => {
       const one = (lazy) => col.map(([k, src], i) => {
         const at = lazy || i > 2 ? 'loading="lazy"' : (i === 0 ? 'fetchpriority="high"' : "");
@@ -235,7 +228,10 @@
   $$(".chart").forEach((box) => {
     const data = CHARTS[box.dataset.chart]; if (!data) return;
     const W = 1000, H = 400;
-    const A = smoothPath(data.a, W, H), B = smoothPath(data.b, W, H);
+    // общий масштаб двух линий: низ периода не прижимается к краю плиты, где его закрывает следующая
+    const all = data.a.concat(data.b).map((p) => p[1]), lo = Math.min(...all), hi = Math.max(...all);
+    const norm = (pts) => pts.map(([x, y]) => [x, .22 + .78 * (y - lo) / (hi - lo || 1)]);
+    const A = smoothPath(norm(data.a), W, H), B = smoothPath(norm(data.b), W, H);
     const grid = [0.25, 0.5, 0.75].map((g) => `<line x1="0" x2="${W}" y1="${(H * g).toFixed(0)}" y2="${(H * g).toFixed(0)}"/>`).join("");
     box.innerHTML = `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none"><g class="grid">${grid}</g><path class="area" d="${A.d} L${W} ${H} L0 ${H} Z"/><path class="ln2" d="${B.d}"/><path class="ln" d="${A.d}"/></svg><i class="ch-dot" style="top:${(A.last[1] / H * 100).toFixed(2)}%"></i>`;
   });
