@@ -31,7 +31,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Noto+Serif+Display:ital,wght@1,400&family=Onest:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="styles.css?v=20261008-2">
+<link rel="stylesheet" href="styles.css?v=20261008-4">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ProfessionalService","name":"ArtSign Studio","alternateName":"ArtSign","url":"https://artsign.kz/","image":"https://artsign.kz/assets/og-image.jpg","logo":"https://artsign.kz/assets/icon-512.png","telephone":"+77018068866","email":"artsignstudio.kz@gmail.com","description":"Настройка Google Ads, продающий сайт в подарок и месяц ведения за 180 000 тг.","address":{"@type":"PostalAddress","addressLocality":"Астана","addressCountry":"KZ"},"areaServed":"KZ","priceRange":"180 000 KZT","sameAs":["https://www.instagram.com/artsign_kz/"],"makesOffer":{"@type":"Offer","name":"Google Ads + сайт в подарок + месяц ведения","price":"180000","priceCurrency":"KZT","url":"https://artsign.kz/#price"}}
 </script>
@@ -116,7 +116,7 @@
 
 <!-- ГЕРОЙ: стена наших сайтов -->
 <div class="pw pw-hero stack" id="home">
-  <section class="plate hero" aria-label="Главный экран">
+  <section class="plate hero lt" aria-label="Главный экран">
     <div class="wall-wrap" aria-hidden="true"><div class="wall" id="wall"></div></div>
     <div class="hero-scrim" aria-hidden="true"></div>
     <div class="hero-light" aria-hidden="true">
@@ -147,23 +147,24 @@
       <div class="case-txt txt">
         <p class="kicker"><svg width="20" height="10"><use href="#sig"/></svg><span data-i="c1.kicker">Кейс · автосервис · carservice01.kz</span></p>
         <h2 class="case-num"><span class="num" data-n="189">189</span><small><span data-i="c1.unit">обращений с рекламы</span><em>24.07 - 31.08.2026</em></small></h2>
-        <ul class="facts-row">
-          <li><b>$1,80</b><span data-i="c1.f1">за обращение</span></li>
-          <li><b>26,5%</b><span data-i="c1.f2">посетителей звонят или пишут</span></li>
-          <li><b>$10</b><span data-i="c1.f3">бюджет в день</span></li>
-        </ul>
-        <p class="case-p" data-i="c1.p">Сайт под срочный ремонт, отдельный блок под каждую услугу, реклама точно на эти блоки.</p>
+        <dl class="story">
+          <div><dt data-i="cs.did">Что сделали</dt><dd data-i="c1.p">Сайт под срочный ремонт, отдельный блок под каждую услугу, реклама точно на эти блоки.</dd></div>
+          <div><dt data-i="cs.res">Итог</dt><dd data-i="c1.res">Обращение по $1,80, звонит или пишет каждый четвёртый посетитель.</dd></div>
+        </dl>
         <p class="live"><i aria-hidden="true"></i><span data-i="c1.live">Кампания работает и сейчас: 235 обращений за 30 дней до 05.10.2026, по $2,35</span></p>
         <a class="link-arr" href="https://carservice01.kz/" target="_blank" rel="noopener"><span data-i="c1.link">Открыть carservice01.kz</span><svg width="16" height="16"><use href="#ic-arr"/></svg></a>
       </div>
-      <figure class="proof">
-        <div class="proof-grid">
-          <img src="assets/kpi/carservice-k0.webp" width="360" height="190" alt="Кабинет Google Ads: 713 кликов" loading="lazy" decoding="async">
-          <img src="assets/kpi/carservice-k2.webp" width="358" height="187" alt="Кабинет Google Ads: расходы $340,57" loading="lazy" decoding="async">
-          <img src="assets/kpi/carservice-k1.webp" width="356" height="186" alt="Кабинет Google Ads: цена клика $0,48" loading="lazy" decoding="async">
-          <img src="assets/kpi/carservice-k3.webp" width="360" height="186" alt="Кабинет Google Ads: 9 659 показов" loading="lazy" decoding="async">
-        </div>
-        <figcaption data-i="c1.cap">Кадр из кабинета Google Ads за тот же период: 713 кликов, $340,57 расходов</figcaption>
+      <figure class="proof funnel">
+        <p class="fn-h" data-i="cs.fn">От показа до обращения</p>
+        <ol class="fn">
+          <li class="fn-row" style="--w:1"><span data-i="cs.imp">Показы</span><b>9 659</b></li>
+          <li class="fn-rate"><b>7,4%</b><span data-i="cs.ofImp">из показов кликнули</span></li>
+          <li class="fn-row" style="--w:.8"><span data-i="cs.clk">Клики</span><b>713</b></li>
+          <li class="fn-rate"><b>26,5%</b><span data-i="cs.ofClk">из кликов обратились</span></li>
+          <li class="fn-row fn-lead" style="--w:.6"><span data-i="cs.lead">Обращения</span><b>189</b></li>
+        </ol>
+        <div class="fn-sum"><span><span data-i="cs.spend">Расход</span> <b>$340,57</b></span><span class="fn-cpl"><b>$1,80</b> <span data-i="cs.per">за обращение</span></span><span class="fn-bud"><span data-i="cs.budget">бюджет в день</span> $10</span></div>
+        <figcaption data-i="cs.src">Цифры из кабинета Google Ads клиента за тот же период</figcaption>
       </figure>
     </div>
     <div class="chart" data-chart="carservice" aria-hidden="true"></div>
@@ -178,23 +179,23 @@
       <div class="case-txt txt">
         <p class="kicker"><svg width="20" height="10"><use href="#sig"/></svg><span data-i="c2.kicker">Кейс · металлочерепица · s-profile.kz</span></p>
         <h2 class="case-num"><span class="num" data-n="137">137</span><small><span data-i="c2.unit">обращений с рекламы</span><em>20.07 - 31.08.2026</em></small></h2>
-        <p class="case-h" data-i="c2.h">Бюджет вырос втрое, цена обращения осталась прежней</p>
-        <ul class="facts-row">
-          <li><b>$4,30</b><span data-i="c2.f1">за обращение</span></li>
-          <li><b>$30</b><span data-i="c2.f2">бюджет в день</span></li>
-          <li><b>12,7%</b><span data-i="c2.f3">CTR объявлений</span></li>
-        </ul>
-        <p class="case-p" data-i="c2.p">Чистка запросов раз в неделю, предельные ставки, минус-слова по каждой группе.</p>
+        <dl class="story">
+          <div><dt data-i="cs.did">Что сделали</dt><dd data-i="c2.p">Чистка запросов раз в неделю, предельные ставки, минус-слова по каждой группе.</dd></div>
+          <div><dt data-i="cs.res">Итог</dt><dd data-i="c2.h">Бюджет вырос втрое, цена обращения осталась прежней.</dd></div>
+        </dl>
         <a class="link-arr" href="https://s-profile.kz/" target="_blank" rel="noopener"><span data-i="c2.link">Открыть s-profile.kz</span><svg width="16" height="16"><use href="#ic-arr"/></svg></a>
       </div>
-      <figure class="proof">
-        <div class="proof-grid">
-          <img src="assets/kpi/sprofile-k0.webp" width="360" height="190" alt="Кабинет Google Ads: 621 клик" loading="lazy" decoding="async">
-          <img src="assets/kpi/sprofile-k3.webp" width="358" height="187" alt="Кабинет Google Ads: расходы $589,27" loading="lazy" decoding="async">
-          <img src="assets/kpi/sprofile-k2.webp" width="357" height="186" alt="Кабинет Google Ads: цена клика $0,95" loading="lazy" decoding="async">
-          <img src="assets/kpi/sprofile-k1.webp" width="360" height="190" alt="Кабинет Google Ads: 4 889 показов" loading="lazy" decoding="async">
-        </div>
-        <figcaption data-i="c2.cap">Кадр из кабинета Google Ads за тот же период: 621 клик, $589,27 расходов</figcaption>
+      <figure class="proof funnel">
+        <p class="fn-h" data-i="cs.fn">От показа до обращения</p>
+        <ol class="fn">
+          <li class="fn-row" style="--w:1"><span data-i="cs.imp">Показы</span><b>4 889</b></li>
+          <li class="fn-rate"><b>12,7%</b><span data-i="cs.ofImp">из показов кликнули</span></li>
+          <li class="fn-row" style="--w:.8"><span data-i="cs.clk">Клики</span><b>621</b></li>
+          <li class="fn-rate"><b>22,1%</b><span data-i="cs.ofClk">из кликов обратились</span></li>
+          <li class="fn-row fn-lead" style="--w:.6"><span data-i="cs.lead">Обращения</span><b>137</b></li>
+        </ol>
+        <div class="fn-sum"><span><span data-i="cs.spend">Расход</span> <b>$589,27</b></span><span class="fn-cpl"><b>$4,30</b> <span data-i="cs.per">за обращение</span></span><span class="fn-bud"><span data-i="cs.budget">бюджет в день</span> $30</span></div>
+        <figcaption data-i="cs.src">Цифры из кабинета Google Ads клиента за тот же период</figcaption>
       </figure>
     </div>
     <div class="chart" data-chart="sprofile" aria-hidden="true"></div>
@@ -209,23 +210,24 @@
       <div class="case-txt txt">
         <p class="kicker"><svg width="20" height="10"><use href="#sig"/></svg><span data-i="c3.kicker">Кейс · медицина на дому · med-home.kz</span></p>
         <h2 class="case-num"><span class="num" data-n="61">61</span><small><span data-i="c3.unit">обращение за первые две недели</span><em>17.08 - 31.08.2026</em></small></h2>
-        <ul class="facts-row">
-          <li><b>$2,37</b><span data-i="c3.f1">за обращение</span></li>
-          <li><b>24%</b><span data-i="c3.f2">посетителей обращаются</span></li>
-          <li><b>12,3%</b><span data-i="c3.f3">CTR объявлений</span></li>
-        </ul>
-        <p class="case-p" data-i="c3.p">Точная семантика по услугам на дому, быстрая связь с телефона.</p>
+        <dl class="story">
+          <div><dt data-i="cs.did">Что сделали</dt><dd data-i="c3.p">Точная семантика по услугам на дому, быстрая связь с телефона.</dd></div>
+          <div><dt data-i="cs.res">Итог</dt><dd data-i="c3.res">61 обращение за первые две недели, по $2,37.</dd></div>
+        </dl>
         <p class="live"><i aria-hidden="true"></i><span data-i="c3.live">Кампания работает и сейчас: 157 обращений за 30 дней до 05.10.2026, по $3,40</span></p>
         <a class="link-arr" href="https://med-home.kz/" target="_blank" rel="noopener"><span data-i="c3.link">Открыть med-home.kz</span><svg width="16" height="16"><use href="#ic-arr"/></svg></a>
       </div>
-      <figure class="proof">
-        <div class="proof-grid">
-          <img src="assets/kpi/medhome-k3.webp" width="354" height="186" alt="Кабинет Google Ads: 251 клик" loading="lazy" decoding="async">
-          <img src="assets/kpi/medhome-k2.webp" width="395" height="200" alt="Кабинет Google Ads: 61 конверсия" loading="lazy" decoding="async">
-          <img src="assets/kpi/medhome-k1.webp" width="358" height="186" alt="Кабинет Google Ads: расходы $144,49" loading="lazy" decoding="async">
-          <img src="assets/kpi/medhome-k0.webp" width="356" height="186" alt="Кабинет Google Ads: 2 038 показов" loading="lazy" decoding="async">
-        </div>
-        <figcaption data-i="c3.cap">Кадр из кабинета Google Ads за тот же период: 251 клик, 61 конверсия, $144,49 расходов</figcaption>
+      <figure class="proof funnel">
+        <p class="fn-h" data-i="cs.fn">От показа до обращения</p>
+        <ol class="fn">
+          <li class="fn-row" style="--w:1"><span data-i="cs.imp">Показы</span><b>2 038</b></li>
+          <li class="fn-rate"><b>12,3%</b><span data-i="cs.ofImp">из показов кликнули</span></li>
+          <li class="fn-row" style="--w:.8"><span data-i="cs.clk">Клики</span><b>251</b></li>
+          <li class="fn-rate"><b>24,3%</b><span data-i="cs.ofClk">из кликов обратились</span></li>
+          <li class="fn-row fn-lead" style="--w:.6"><span data-i="cs.lead">Обращения</span><b>61</b></li>
+        </ol>
+        <div class="fn-sum"><span><span data-i="cs.spend">Расход</span> <b>$144,49</b></span><span class="fn-cpl"><b>$2,37</b> <span data-i="cs.per">за обращение</span></span></div>
+        <figcaption data-i="cs.src">Цифры из кабинета Google Ads клиента за тот же период</figcaption>
       </figure>
     </div>
     <div class="chart" data-chart="medhome" aria-hidden="true"></div>
@@ -727,6 +729,6 @@
 
 <div class="grain" aria-hidden="true"></div>
 
-<script src="script.js?v=20261008-2" defer></script>
+<script src="script.js?v=20261008-4" defer></script>
 </body>
 </html>

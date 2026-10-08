@@ -17,12 +17,12 @@
     "hero.kicker": "Google Ads · website · management", "hero.h1a": "Google Ads", "hero.h1b": "+ a website ", "hero.h1c": "as a gift",
     "hero.lead": "We set up the ads, build a selling website and manage the campaign for a month. 180,000 KZT for everything, launch in 2-4 business days.",
     "hero.btn1": "Estimate my lead cost", "hero.btn2": "Message on WhatsApp", "hero.ig": "Work and ad accounts on Instagram",
-    "cs.legend": "clicks and leads by day",
+    "cs.legend": "clicks and leads by day", "cs.did": "What we did", "cs.res": "Result", "cs.fn": "From impression to lead", "cs.imp": "Impressions", "cs.clk": "Clicks", "cs.lead": "Leads", "cs.ofImp": "of impressions clicked", "cs.ofClk": "of clicks got in touch", "cs.spend": "Spend", "cs.per": "per lead", "cs.budget": "daily budget", "cs.src": "Numbers from the client's Google Ads account for the same period", "c1.res": "A lead for $1.80, every fourth visitor calls or writes.", "c3.res": "61 leads in the first two weeks, at $2.37 each.",
     "c1.kicker": "Case · car service · carservice01.kz", "c1.unit": "leads from ads", "c1.f1": "per lead", "c1.f2": "of visitors call or write", "c1.f3": "daily budget",
     "c1.p": "A website for urgent repairs, a separate block for each service, ads pointed exactly at those blocks.", "c1.link": "Open carservice01.kz",
     "c1.live": "The campaign is still running: 235 leads in the 30 days to 05.10.2026, at $2.35 each",
     "c1.cap": "A frame from the Google Ads account for the same period: 713 clicks, $340.57 spent",
-    "c2.kicker": "Case · metal roofing · s-profile.kz", "c2.unit": "leads from ads", "c2.h": "Budget tripled, cost per lead stayed the same", "c2.f1": "per lead", "c2.f2": "daily budget", "c2.f3": "ad CTR",
+    "c2.kicker": "Case · metal roofing · s-profile.kz", "c2.unit": "leads from ads", "c2.h": "Budget tripled, cost per lead stayed the same.", "c2.f1": "per lead", "c2.f2": "daily budget", "c2.f3": "ad CTR",
     "c2.p": "Weekly query cleanup, bid caps, negative keywords for every ad group.", "c2.link": "Open s-profile.kz", "c2.cap": "A frame from the Google Ads account for the same period: 621 clicks, $589.27 spent",
     "c3.kicker": "Case · home medical care · med-home.kz", "c3.unit": "leads in the first two weeks", "c3.f1": "per lead", "c3.f2": "of visitors get in touch", "c3.f3": "ad CTR",
     "c3.p": "Precise keywords for at-home services, instant contact from the phone.", "c3.link": "Open med-home.kz",
@@ -132,6 +132,7 @@
     if (on) { menu.hidden = false; requestAnimationFrame(() => menu.classList.add("is-open")); }
     else { menu.classList.remove("is-open"); setTimeout(() => { if (!menu.classList.contains("is-open")) menu.hidden = true; }, 320); }
     document.body.classList.toggle("menu-open", on);
+    if (on) hdr.classList.remove("on-lt"); else requestAnimationFrame(update);
     document.body.style.overflow = on ? "hidden" : "";
     burger.setAttribute("aria-expanded", on ? "true" : "false");
     burger.setAttribute("aria-label", on ? "Закрыть меню" : "Открыть меню");
@@ -340,6 +341,11 @@
     const ct = contact.getBoundingClientRect();
     sticky.classList.toggle("is-on", scrollY > H * .55 && ct.top > H * .6);
     hdr.classList.toggle("is-scrolled", scrollY > 8);
+    // шапка светлеет над светлыми секциями (и над белым героем)
+    if (!document.body.classList.contains("menu-open")) {
+      const under = document.elementFromPoint(innerWidth / 2, hdrH() + 2);
+      hdr.classList.toggle("on-lt", !!(under && under.closest(".lt") && !under.closest(".dk")));
+    }
     // путь клика: голова следа и узлы
     if (scene) {
       const r = scene.getBoundingClientRect();
