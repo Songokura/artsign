@@ -51,9 +51,9 @@
     "b.kicker": "Lead bot", "b.h2": "You see every lead, not just clicks", "b.lead": "The bot sends every call, WhatsApp message and form to Telegram: when, from where and for which query. Once a week, a summary.", "b.badge": "included",
     "b.m1t": "New lead", "b.m1a": "Channel: WhatsApp", "b.m1b": "Source: Google Ads, query \"engine repair astana\"", "b.m1c": "Site block: diagnostics", "b.m1d": "Device: phone",
     "b.m2t": "Weekly summary", "b.m2w": "Mon-Sun", "b.m2a": "leads", "b.m2c": "calls", "b.m2d": "form requests", "b.note": "Example. Your numbers will be your own.",
-    "w.kicker": "Work", "w.h2": "Websites built in the last few weeks", "w.lead": "All links are live. Your website will be of the same level.", "w.open": "Open the site",
+    "w.kicker": "Work", "w.h2": "Websites built in the last few weeks", "w.lead": "All links are live. Your website will be of the same level.", "w.open": "Open the site", "w.b8": "Business Valuation", "w.b4": "Fridge Repair",
     "w.f0": "All", "w.f1": "Services", "w.f2": "B2B and manufacturing", "w.f3": "Trade", "w.f4": "Legal and finance", "w.f5": "HoReCa",
-    "w.n1": "door hardware", "w.n2": "patents and trademarks", "w.n3": "freight from China", "w.n4": "custom radiators", "w.n5": "AIFC registration", "w.n6": "countryside retreat", "w.n7": "homewear wholesale", "w.n8": "law firm", "w.n9": "hotel", "w.n10": "handyman", "w.n11": "asphalt paving", "w.n12": "car service",
+    "w.n1": "seafood restaurant, Aktau", "w.n2": "stainless steel products", "w.n3": "turnkey gates and canopies", "w.n4": "home appliance repair, Almaty", "w.n5": "catering and events", "w.n6": "car paint and body repair", "w.n7": "business law firm", "w.n8": "property and business valuation", "w.n9": "podiatrist, Aktobe", "w.n10": "paintball and shooting, Almaty", "w.n11": "air conditioner installation", "w.n12": "washing machine repair",
     "w.ig": "More work on Instagram", "r.kicker": "Reviews", "r.h2": "What clients say",
     "k.kicker": "Calculator", "k.h2": "What a lead may cost in your niche", "k.niche": "Niche",
     "k.n1": "Car service, tyre fitting", "k.n2": "Medicine, dentistry", "k.n3": "Construction, renovation, finishing", "k.n4": "Windows, doors, ceilings, furniture", "k.n5": "Lawyers, accounting, consulting", "k.n6": "Wholesale and B2B supply", "k.n7": "Beauty, health, at-home services", "k.n8": "Another niche",
@@ -158,14 +158,14 @@
 
   /* ---------------- герой: стена сайтов ---------------- */
   // каждый сайт на стене один раз: 13 из портфолио + 18 других наших проектов (кадры в assets/works/wall)
-  // на стене только проекты, которых нет ниже по странице (лента работ, дизайн-кейсы, «Что входит»)
-  const WALL = ["bestshine", "nisada", "trioclinic", "bigpower", "strongsteel", "aig", "deekeyz", "tautasbeton", "remontkz", "electroservice", "coolklimat", "aeckazakhstan", "adrenaline"];
-  const WALL_M = ["sollmarine", "bestshine", "deekeyz", "strongsteel", "tautasbeton", "trioclinic", "bigpower", "nisada", "aig", "remontkz", "electroservice", "adrenaline", "coolklimat", "aeckazakhstan"];
+  // стена героя: прежние работы и проекты, которых нет ниже по странице (свежие сайты - в ленте работ)
+  const WALL = ["works/mypatent", "works/wall/bestshine", "works/pslgroup", "works/wall/nisada", "works/zhantore", "works/wall/trioclinic", "works/ahpartners", "works/wall/bigpower", "works/sunsara", "works/wall/strongsteel", "works/kelebek", "works/wall/aig", "works/legalresource", "works/wall/tautasbeton", "works/hotelcomfort", "works/wall/remontkz", "works/provar", "works/wall/electroservice", "works/asphalttau", "works/wall/aeckazakhstan", "works/carservice"];
+  const WALL_M = ["works/m/mypatent", "works/wall/bestshine-m", "works/m/pslgroup", "works/wall/strongsteel-m", "works/m/zhantore", "works/wall/tautasbeton-m", "works/m/ahpartners", "works/wall/trioclinic-m", "works/m/sunsara", "works/wall/bigpower-m", "works/m/kelebek", "works/wall/nisada-m", "works/m/legalresource", "works/wall/aig-m", "works/m/hotelcomfort", "works/wall/remontkz-m", "works/m/provar", "works/wall/electroservice-m", "works/m/asphalttau", "works/wall/aeckazakhstan-m"];
   function buildWall() {
     const wall = $("#wall"); if (!wall) return;
     const tile = (k, src) => [k, src];
-    const desk = WALL.map((w) => tile("d", `assets/works/wall/${w}.webp`));
-    const mob = WALL_M.map((w) => tile("m", `assets/works/wall/${w}-m.webp`));
+    const desk = WALL.map((w) => tile("d", `assets/${w}.webp`));
+    const mob = WALL_M.map((w) => tile("m", `assets/${w}.webp`));
     const tiles = [];
     for (let i = 0; i < Math.max(desk.length, mob.length * 2); i++) {
       if (desk[i]) tiles.push(desk[i]);
