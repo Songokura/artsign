@@ -341,10 +341,10 @@
     const ct = contact.getBoundingClientRect();
     sticky.classList.toggle("is-on", scrollY > H * .55 && ct.top > H * .6);
     hdr.classList.toggle("is-scrolled", scrollY > 8);
-    // шапка светлеет над светлыми секциями (и над белым героем)
+    // шапка светлеет над светлыми секциями; над героем остаётся синей (решение владельца)
     if (!document.body.classList.contains("menu-open")) {
       const under = document.elementFromPoint(innerWidth / 2, hdrH() + 2);
-      hdr.classList.toggle("on-lt", !!(under && under.closest(".lt") && !under.closest(".dk")));
+      hdr.classList.toggle("on-lt", !!(under && under.closest(".lt") && !under.closest(".dk, .hero")));
     }
     // путь клика: голова следа и узлы
     if (scene) {

@@ -176,9 +176,10 @@ body.menu-open .hdr { backdrop-filter: none; -webkit-backdrop-filter: none; back
 }
 .brand { display: inline-flex; align-items: center; gap: 11px; position: relative; z-index: 2; }
 .brand-mark { filter: drop-shadow(0 6px 16px rgba(94, 107, 240, .45)); }
-.brand-wm { font-family: var(--ft); font-weight: 700; font-size: 22px; letter-spacing: -.03em; line-height: 1; display: inline-flex; align-items: baseline; color: var(--hi); }
-.brand-wm b { background: linear-gradient(120deg, #5E6BF0 0%, #4396EF 55%, #40C4E8 100%); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 700; }
-.brand-wm small { font-size: 12px; font-weight: 500; color: var(--mute); margin-left: 7px; letter-spacing: .02em; }
+.brand-wm { display: inline-block; font-family: var(--ft); font-weight: 700; font-size: 22px; letter-spacing: -.025em; line-height: 1.1; color: var(--hi); }
+/* хвост «g» не обрезается: у градиентного слова запас снизу */
+.brand-wm b { display: inline-block; padding: 0 .04em .14em 0; margin-bottom: -.14em; background: linear-gradient(120deg, #5E6BF0 0%, #4396EF 55%, #40C4E8 100%); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 700; }
+.brand-wm small { display: block; margin: 4px -.5em 0 1px; font-family: var(--ft); font-size: 12px; font-weight: 500; line-height: 1; letter-spacing: .5em; text-transform: uppercase; color: var(--mute); }
 .nav { display: flex; gap: 2px; margin-left: auto; }
 .nav a { padding: 8px 12px; font-weight: 500; font-size: 14.5px; color: var(--text-2); white-space: nowrap; position: relative; transition: color .2s; }
 .nav a::after { content: ""; position: absolute; left: 12px; right: 12px; bottom: 3px; height: 1px; background: var(--ac); transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease); }
