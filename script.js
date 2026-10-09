@@ -6,6 +6,11 @@
   const clamp = (v, a, b) => Math.min(b === undefined ? 1 : b, Math.max(a === undefined ? 0 : a, v));
   const easeOut = (t) => 1 - Math.pow(1 - t, 3);
   const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // телефон: без анимаций от прокрутки (решение владельца 09.10.2026) - плиты обычным потоком, всё показано сразу
+  const MQ_FLAT = matchMedia("(max-width: 760px)");
+  const still = () => REDUCED || MQ_FLAT.matches;
+  const setFlat = () => document.documentElement.classList.toggle("flat", MQ_FLAT.matches);
+  setFlat(); MQ_FLAT.addEventListener && MQ_FLAT.addEventListener("change", setFlat);
   const ASSET_V = ((document.currentScript && document.currentScript.src.match(/[?&]v=([^&]+)/)) || [])[1] || "";
   const WA = "77018068866";
 
@@ -249,7 +254,7 @@
   const hero = $(".hero");
   const hasHash = !!location.hash && !!document.getElementById(location.hash.slice(1));
   let intro = 0, introDone = false;
-  const skipIntro = REDUCED || hasHash || scrollY > 80;
+  const skipIntro = still() || hasHash || scrollY > 80;
 
   function runIntro() {
     if (skipIntro) { intro = 1; hero.style.setProperty("--intro", "1"); introDone = true; return; }
@@ -264,7 +269,7 @@
   const counted = new WeakSet();
   function countUp(el) {
     if (counted.has(el)) return; counted.add(el);
-    const n = +el.dataset.n, t0 = performance.now(), D = REDUCED ? 0 : 1400;
+    const n = +el.dataset.n, t0 = performance.now(), D = still() ? 0 : 1400;
     (function tick(now) {
       const t = D ? clamp((now - t0) / D) : 1;
       el.textContent = Math.round(n * easeOut(t));
@@ -319,6 +324,13 @@
     const H = innerHeight;
     const enters = pws.map((pw) => { const r = pw.getBoundingClientRect(); return { r, enter: clamp(1 - r.top / H) }; });
     pws.forEach((pw, i) => {
+      if (MQ_FLAT.matches) {
+        pw.style.setProperty("--enter", "1"); pw.style.setProperty("--stay", "0"); pw.style.setProperty("--exit", "0"); pw.style.setProperty("--open", "1");
+        pw.classList.remove("gone");
+        const txt = $(".txt", pw); if (txt) txt.classList.add("on");
+        const num = $(".num", pw); if (num) countUp(num);
+        return;
+      }
       const { r, enter } = enters[i];
       const hold = pw.classList.contains("stack") ? H : 0;
       const span = r.height - hold - H;
@@ -347,7 +359,7 @@
       const r = scene.getBoundingClientRect();
       if (!scBuilt && r.top < H * 1.6 && r.bottom > -H) buildScene();
       if (SC.path && r.bottom > -100 && r.top < H + 100) {
-        const p = REDUCED ? 1 : clamp((H * .72 - r.top) / (r.height * .92));
+        const p = still() ? 1 : clamp((H * .72 - r.top) / (r.height * .92));
         scene.style.setProperty("--p", p.toFixed(4));
         scene.classList.toggle("done", p > .97);
         const q = SC.path.getPointAtLength(SC.len * p);
@@ -361,18 +373,18 @@
     // бот: уведомления прилетают по одному
     if (tg) {
       const r = tg.getBoundingClientRect();
-      const p = REDUCED ? 1 : clamp((H * .88 - r.top) / (r.height * .7));
+      const p = still() ? 1 : clamp((H * .88 - r.top) / (r.height * .7));
       msgEls.forEach((m, i) => m.classList.toggle("on", p > .06 + i * .22));
     }
     // процесс: линия и шаги
     if (proc) {
       const r = proc.getBoundingClientRect();
-      const p = REDUCED ? 1 : clamp((H * .8 - r.top) / (r.height + H * .25));
+      const p = still() ? 1 : clamp((H * .8 - r.top) / (r.height + H * .25));
       proc.style.setProperty("--p", p.toFixed(4));
       procEls.forEach((li, i) => li.classList.toggle("lit", p >= i / procEls.length + .01));
     }
     // финальный экран: след сходится к форме
-    if (ct.top < H && ct.bottom > 0) contact.style.setProperty("--p", (REDUCED ? 1 : clamp((H - ct.top) / (ct.height * .75))).toFixed(4));
+    if (ct.top < H && ct.bottom > 0) contact.style.setProperty("--p", (still() ? 1 : clamp((H - ct.top) / (ct.height * .75))).toFixed(4));
   }
   function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
   addEventListener("scroll", onScroll, { passive: true });

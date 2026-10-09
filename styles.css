@@ -1286,3 +1286,19 @@ html[lang="kk"] .story > div { grid-template-columns: 150px 1fr; }
   .proc-list b { font-size: 20px; margin: 0 0 4px; }
 }
 @media (prefers-reduced-motion: reduce) { .scene.done .sc-pulse { animation: none; opacity: 0; } }
+
+/* ========== 09.10.2026: телефон без анимаций от прокрутки (решение владельца) ========== */
+/* плиты обычным потоком: ничего не держит экран и не наезжает, содержимое видно сразу */
+@media (max-width: 760px) {
+  .pw, .pw-hero, .pw.stack, .pw-hero.stack { height: auto; margin-bottom: 0; }
+  .plate { position: relative; height: auto; min-height: 100svh; transform: none; border-radius: 0; box-shadow: none; }
+  .plate::after, .case::before { display: none; }
+  .hero.plate { height: 100svh; }
+  .case-in { height: auto; padding-bottom: 196px; }
+  .chart { top: auto !important; height: 150px; bottom: 26px; clip-path: none; }
+  .txt > *, .rv, .hero-txt > *, .ui, .msg, .kw, .bars i, .wa-b, .proc-list li, .proc-list i { transition: none !important; opacity: 1; transform: none; }
+  .wall, .wcol { transform: none; }
+  .wall { transform: rotateX(14deg) rotateY(-8deg) rotateZ(7deg) translateZ(-40px) scale(1.08); }
+  .bars-ln path, .pp-trace path { transition: none; stroke-dashoffset: 0; }
+  .scene .sc-pulse { display: none; }
+}
