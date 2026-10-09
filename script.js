@@ -169,8 +169,10 @@
   function buildWall() {
     const wall = $("#wall"); if (!wall) return;
     const tile = (k, src) => [k, src];
-    const desk = WALL.map((w) => tile("d", `assets/${w}.webp`));
-    const mob = WALL_M.map((w) => tile("m", `assets/${w}.webp`));
+    // телефон: 9 кадров вместо 41, без приоритета загрузки - первым грузится текст героя
+    const lite = MQ_FLAT.matches;
+    const desk = (lite ? WALL.slice(0, 6) : WALL).map((w) => tile("d", `assets/${w}.webp`));
+    const mob = (lite ? WALL_M.slice(0, 3) : WALL_M).map((w) => tile("m", `assets/${w}.webp`));
     const tiles = [];
     for (let i = 0; i < Math.max(desk.length, mob.length * 2); i++) {
       if (desk[i]) tiles.push(desk[i]);
@@ -180,7 +182,7 @@
     tiles.forEach((t, i) => cols[i % 3].push(t));
     wall.innerHTML = cols.map((col) => {
       const one = (lazy) => col.map(([k, src], i) => {
-        const at = lazy || i > 2 ? 'loading="lazy"' : (i === 0 ? 'fetchpriority="high"' : "");
+        const at = lazy || i > (lite ? 1 : 2) ? 'loading="lazy"' : (i === 0 ? 'fetchpriority="high"' : "");
         return k === "d"
           ? `<div class="wtile d"><img src="${src}" width="880" height="550" alt="" ${at} decoding="async"></div>`
           : `<div class="wtile m"><img src="${src}" width="360" height="720" alt="" ${at} decoding="async"></div>`;
