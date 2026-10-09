@@ -300,6 +300,7 @@
     const d = catmull(all);
     const ln = $(".sc-line", scene), gh = $(".sc-ghost", scene);
     ln.setAttribute("d", d); gh.setAttribute("d", d);
+    const pu = $(".sc-pulse", scene); if (pu) { pu.setAttribute("d", d); pu.setAttribute("pathLength", "1"); }
     SC.path = ln; SC.head = $(".sc-head", scene); SC.len = ln.getTotalLength();
     // доля длины пути до каждого узла
     const N = 160, samp = [];
@@ -348,6 +349,7 @@
       if (SC.path && r.bottom > -100 && r.top < H + 100) {
         const p = REDUCED ? 1 : clamp((H * .72 - r.top) / (r.height * .92));
         scene.style.setProperty("--p", p.toFixed(4));
+        scene.classList.toggle("done", p > .97);
         const q = SC.path.getPointAtLength(SC.len * p);
         SC.head.setAttribute("cx", q.x.toFixed(1)); SC.head.setAttribute("cy", q.y.toFixed(1));
         nodeEls.forEach((el, i) => {
