@@ -12,10 +12,10 @@
   /* ---------------- i18n ---------------- */
   const I18N = { ru: {}, en: {
     "meta.title": "PPC advertising in Astana: Google Ads + a website as a gift",
-    "meta.desc": "Google Ads setup, a selling website as a gift and one month of management for 180,000 KZT. Launch in 2-4 business days. Every lead is visible in the bot. Astana and all of Kazakhstan.",
+    "meta.desc": "Google Ads setup, a selling website as a gift and one month of management for 180,000 KZT. Launch in 2-4 business days. Every lead is visible in the bot. Astana and all of Kazakhstan.",
     "nav.cases": "Cases", "nav.package": "What's included", "nav.works": "Work", "nav.calc": "Calculator", "nav.price": "Price", "nav.contact": "Contact", "nav.how": "How it works", "nav.faq": "FAQ",
     "hero.kicker": "Google Ads · website · management", "hero.h1a": "Google Ads", "hero.h1b": "+ a website ", "hero.h1c": "as a gift",
-    "hero.lead": "We set up the ads, build a selling website and manage the campaign for a month. 180,000 KZT for everything, launch in 2-4 business days.",
+    "hero.lead": "We set up the ads, build a selling website and manage the campaign for a month. 180,000 KZT for everything, launch in 2-4 business days.",
     "hero.btn1": "Estimate my lead cost", "hero.btn2": "Message on WhatsApp", "hero.ig": "Work and ad accounts on Instagram",
     "cs.legend": "clicks and leads by day", "cs.did": "What we did", "cs.res": "Result", "cs.fn": "From impression to lead", "cs.imp": "Impressions", "cs.clk": "Clicks", "cs.lead": "Leads", "cs.ofImp": "of impressions clicked", "cs.ofClk": "of clicks got in touch", "cs.spend": "Spend", "cs.per": "per lead", "cs.budget": "daily budget", "cs.src": "Numbers from the client's Google Ads account for the same period", "c1.res": "55 leads in the first two weeks, at $2.93 each.", "c3.res": "82 leads in the first month, at $6.72 each in a B2B niche.",
     "c1.kicker": "Case · concrete plant · tautas-beton.kz", "c1.unit": "leads from ads", "c1.f1": "per lead", "c1.f2": "of visitors call or write", "c1.f3": "daily budget",
@@ -43,7 +43,7 @@
     "k.d1": "1 day", "k.d15": "15 days", "k.d30": "30 days", "k.month": "Your month: each block is one lead", "k.perday": "a day", "k.of100": "out of 100 site visitors call or message",
     "pr.n1": "a month, management from the second month", "pr.n2b": "$5-10", "pr.n2": "a day - the ad budget, paid to Google directly",
     "f.cta": "Didn't find your question?", "f.ctaS": "Write to us, we reply on WhatsApp during business hours.", "f.ctaB": "Ask on WhatsApp",
-    "ct.c1b": "2-4 days", "ct.c1": "to launch", "ct.c2b": "180,000 KZT", "ct.c2": "ads, website and a month of management", "ct.c3b": "Every", "ct.c3": "lead is visible in the bot", "ct.ig": "Cases on Instagram",
+    "ct.c1b": "2-4 days", "ct.c1": "to launch", "ct.c2b": "180,000 KZT", "ct.c2": "ads, website and a month of management", "ct.c3b": "Every", "ct.c3": "lead is visible in the bot", "ct.ig": "Cases on Instagram",
     "p.kicker": "What's included", "p.h2": "Three jobs in one package",
     "p.r1": "Ads setup", "p.r1t": "1-3 business days", "p.r1a": "keywords and negatives", "p.r1b": "ads written for your offer", "p.r1c": "geo, schedule, bids", "p.r1d": "call, WhatsApp and form tracking",
     "p.r2": "A selling website as a gift", "p.r2t": "1-3 business days", "p.r2a": "one page built for leads", "p.r2b": "designed for the phone", "p.r2c": "basic SEO, Search Console and your socials", "p.r2d": "WhatsApp and call buttons",
@@ -66,16 +66,16 @@
     "ps.kicker": "How we work", "ps.h2": "From a call to the first leads",
     "ps.1": "A call", "ps.1s": "niche, city, customer value. About 20 minutes", "ps.2": "Contract and payment", "ps.2s": "the same day", "ps.3": "Website and campaigns", "ps.3s": "you review once, we revise. 2-4 business days", "ps.4": "Launch and management", "ps.4s": "weekly cleanup, leads visible in the bot",
     "f.kicker": "FAQ", "f.h2": "What people ask before starting",
-    "f.q1": "Is the ad budget included in 180,000 KZT?", "f.a1": "No. That is the fee for our work. You pay Google for clicks yourself, starting from $5-10 a day.",
+    "f.q1": "Is the ad budget included in 180,000 KZT?", "f.a1": "No. That is the fee for our work. You pay Google for clicks yourself, starting from $5-10 a day.",
     "f.q2": "How much will a lead cost me?", "f.a2": "It depends on the niche and the city. See the calculator above for a benchmark; we make the exact estimate for free.",
     "f.q3": "I already have a website", "f.a3": "We will run ads to it, and build the gift page for one service or a promotion.",
     "f.q4": "Why is the website a gift?", "f.a4": "Ads do not pay off without a good website, so it comes with the package. We build it with a proven system in 1-3 days and then improve it based on ad results.",
-    "f.q5": "What happens after the first month?", "f.a5": "You extend management for 100,000 KZT a month or we wrap up: the Google Ads account is already on your email, hosting access is given on request.",
+    "f.q5": "What happens after the first month?", "f.a5": "You extend management for 100,000 KZT a month or we wrap up: the Google Ads account is already on your email, hosting access is given on request.",
     "f.q6": "Where are you based?", "f.a6": "In Astana, where our office is - you are welcome to visit. With clients from other cities and countries we do everything online: the call, the review and the edits.",
     "f.q7": "Whose account will the ads and the site be on?", "f.a7": "The ads are always on your email: if you have a Google Ads account, we work in it; if not, we help you create one on your email. Hosting: if you have your own, the site goes there; if not, we host it on ours and give you access on request.",
     "ct.kicker": "Request", "ct.h2": "Let's estimate a lead for your niche", "ct.lead": "Send your phone number and niche. We reply on WhatsApp during business hours.",
     "ct.phone": "Phone (WhatsApp)", "ct.niche": "Niche and city", "ct.nichePh": "e.g. dentistry, Almaty…", "skip": "Skip to content", "ct.err": "Check the phone number: at least 10 digits.", "ct.btn": "Get an estimate",
-    "ct.note": "The button opens WhatsApp with a ready message. We reply during business hours.", "ct.ok": "Thanks, your request went to WhatsApp", "ct.ok2": "If the window did not open, write to us at +7 701 806 88 66",
+    "ct.note": "The button opens WhatsApp with a ready message. We reply during business hours.", "ct.ok": "Thanks, your request went to WhatsApp", "ct.ok2": "If the window did not open, write to us at +7 701 806 88 66",
     "ft.l": "Google Ads, websites and management. Astana, working across Kazakhstan.", "ft.c": "Sole proprietor CALIFORNIA", "st.call": "Call"
   } };
   const RU_PH = { "ct.nichePh": "например, стоматология, Алматы…", "wa.l1": "Здравствуйте! Хочу расчёт по пакету Google Ads + сайт.", "wa.l2": "Телефон:", "wa.l3": "Ниша и город:", "wa.l4": "Бюджет:", "wa.l5": "/день" };
@@ -89,7 +89,7 @@
     "blog.t3": "How much Google Ads costs in Kazakhstan in 2026", "blog.d3": "Cost per click and per lead across 42 accounts, bids by niche and a starting budget.",
   });
   Object.assign(I18N.en, { "wa.l1": "Hello! I want an estimate for the Google Ads + website package.", "wa.l2": "Phone:", "wa.l3": "Niche and city:", "wa.l4": "Budget:", "wa.l5": "/day" });
-  const META = { ru: ["Контекстная реклама в Астане: Google Ads + сайт в подарок", "Настройка Google Ads, продающий сайт в подарок и месяц ведения за 180 000 тг. Запуск за 2-4 рабочих дня. Каждое обращение видно в боте. Астана и весь Казахстан."] };
+  const META = { ru: ["Контекстная реклама в Астане: Google Ads + сайт в подарок", "Настройка Google Ads, продающий сайт в подарок и месяц ведения за 180 000 тг. Запуск за 2-4 рабочих дня. Каждое обращение видно в боте. Астана и весь Казахстан."] };
 
   // русский словарь собираем из разметки один раз: разметка - источник правды
   $$("[data-i]").forEach((el) => { if (I18N.ru[el.dataset.i] === undefined) I18N.ru[el.dataset.i] = el.textContent; });

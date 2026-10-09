@@ -1235,8 +1235,12 @@ html[lang="kk"] .story > div { grid-template-columns: 150px 1fr; }
   .node.lit:hover .ui { transform: translateY(-6px); box-shadow: 0 36px 70px -32px rgba(43, 120, 218, .6); }
 }
 @media (max-width: 900px) {
-  .ui { height: 176px; }
+  .ui { height: auto; min-height: 0; }
+  .ui-search, .ui-bot { height: 96px; }
+  .ui-ad { padding: 20px 20px 22px; }
+  .ui-site { height: 176px; }
   .ui-phone { height: 190px; }
+  .ui-wa { padding: 16px 16px 18px; }
 }
 
 /* как работаем: шаги карточками, цифра заливкой */
