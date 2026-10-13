@@ -48,7 +48,7 @@
     "k.d1": "1 day", "k.d15": "15 days", "k.d30": "30 days", "k.month": "Your month: each block is one lead", "k.perday": "a day", "k.of100": "out of 100 site visitors call or message",
     "pr.n1": "a month, management from the second month", "pr.n2b": "$5-10", "pr.n2": "a day - the ad budget, paid to Google directly",
     "f.cta": "Didn't find your question?", "f.ctaS": "Write to us, we reply on WhatsApp during business hours.", "f.ctaB": "Ask on WhatsApp",
-    "ct.c1b": "2-4 days", "ct.c1": "to launch", "ct.c2b": "180,000 KZT", "ct.c2": "ads, website and a month of management", "ct.c3b": "Every", "ct.c3": "lead is visible in the bot", "ct.ig": "Cases on Instagram",
+    "ct.c1b": "2-4 days", "ct.c1": "to launch", "ct.c2b": "180,000 KZT", "ct.c2": "ads, website and a month of management", "ct.c3b": "Every", "ct.c3": "lead is visible in the bot", "ct.ig": "Cases on Instagram", "ct.map": "Our office in Astana on 2GIS",
     "p.kicker": "What's included", "p.h2": "Three jobs in one package",
     "p.r1": "Ads setup", "p.r1t": "1-3 business days", "p.r1a": "keywords and negatives", "p.r1b": "ads written for your offer", "p.r1c": "geo, schedule, bids", "p.r1d": "call, WhatsApp and form tracking",
     "p.r2": "A selling website as a gift", "p.r2t": "1-3 business days", "p.r2a": "one page built for leads", "p.r2b": "designed for the phone", "p.r2c": "basic SEO, Search Console and your socials", "p.r2d": "WhatsApp and call buttons",
